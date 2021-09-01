@@ -27,15 +27,15 @@ We assume the following products are installed, up and running:
 1. Determine your credentials
     1. For Content Services, use your own credentials to login into IBM Content Navigator
     1. For BAW, create a service credential/account
-      1. Functional ID alias: OnboardingAutomation
-      1. Description: Used by process app Employee Onboarding - Onboard Employee
+        1. Functional ID alias: OnboardingAutomation
+        1. Description: Used by process app Employee Onboarding - Onboard Employee
 1. Deploy Content Services  (for both DEV and RUN)
     1. Login to Aministration Console for Content Engine (ACCE) and create:
         1. Property Templates for:
             1. First Name (String)
             1. Last Name (String)
             1. Application Date (Date Time)
-        1. Document sub-classed called **Employment Application** with the three properties created in the step above
+        1. Document sub-class called **Employment Application** with the three properties created in the step above
     1. Use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
     1. Navigator menu options
         1. Copy the **Default Document Content Menu** menu option and add options for **Launch Process** and **Share**  (Share is only needed for Additional Assets section)
@@ -66,19 +66,13 @@ We assume the following products are installed, up and running:
     1. Install the new snapshot to your Workflow Server
     1. In Process Admin Console, go to Installed Apps, Servers and update the Context Path to the Run environment
 1. Deploy Business Automation Studio artifacts
-    1. If using Cloud Pak for Business Automation as a Service
-        1. Create an external automation service named Onboarding_Automation_Application_Services, connect it to the appropriate BAW server, select the Onboard Employee process and publish
-        1. Export the external automation service as a ZIP from the Business automations -> External section
-    1. If deploying Onboarding Automation on your own OpenShift environment:
-        1. Publish the workflow project's snapshot in Business Automation Studio to make the automation services available to applications
-    1. Import the Onboarding Automation application in Business applications using Onboarding_Automation - App - YYYY.MM.DD_XX_PLATFORM.twx (where platform is saas-<version> for Cloud Pak for Business Automation as a Service or ocp-demo-<version> for deploying Onboarding Automation on your own OpenShift demo pattern environment)
+    1. Import the Onboarding Automation application in Business applications using Onboarding_Automation - App - YYYY.MM.DD_XX.twx
     1. No edit of the application should be required but if an edit is done, create a new snapshot
     1. Export the application as a ZIP
 1. Deploy Business Automation Navigator artifacts
-  1. Login to Business Automation Navigator's admin desktop
-  1. Open and connect to the Application Engine Connection, sometimes called APPENGO
-  1. If using Cloud Pak for Business Automation as a Service: import both the automation service and application ZIP files
-  1. If deploying Refund Request on your own OpenShift environment: import only the application ZIP file
+    1. Login to Business Automation Navigator's admin desktop
+    1. Open and connect to the Application Engine Connection, sometimes called APPENGO
+    1. Import the application ZIP file
   1. Edit the details of the application and add appropriate teams to the Permissions table
   1. Edit the desktop of your choice and on the Layout tab, add the application
 
