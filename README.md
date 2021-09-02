@@ -39,7 +39,7 @@ We assume the following products are installed, up and running:
             1. Last Name (String)
             1. Application Date (Date Time)
         1. Document sub-class called **Employment Application** with the three properties created in the step above
-    1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
+    1. Using GraphiQL2, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
     1. Navigator Administration
         1. Repositories
             The environment uses two object stores - the FileNet content object store and the BAW target object store
