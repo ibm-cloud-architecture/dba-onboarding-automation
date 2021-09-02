@@ -16,12 +16,13 @@
 
 We assume the following products are installed, up and running:
 
-* IBM Cloud Pak® for Business Automation version 20.0.3
-    * Business Automation Content Services
-    * Business Automation Studio
-    * Business Automation Workflow (BAW) on VMs (may work on OpenShift, has not been tested)
+* IBM Cloud Pak® for Business Automation version 21.0.2
+    * Automation Foundation on OpenShift
+    * Business Automation Applications (including Studio and App Engine) on OpenShift
+    * Business Automation Content Services on VMs or OpenShift
+    * Business Automation Navigator on OpenShift
+    * Business Automation Workflow (BAW) on VMs or OpenShift
         Note: only necessary for the last lab step to launch a process from a document
-
 
 ### Deploy the artifacts
 
