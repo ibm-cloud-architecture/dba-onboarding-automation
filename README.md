@@ -42,7 +42,8 @@ We assume the following products are installed, up and running:
     1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
     1. Navigator Administration
         1. Desktops - edit your default desktop with the following settings:
-            1. **Layout** tab - **Additional Desktop Components** - **Content list checkboxes**: **Show**
+            1. **General** tab - **Additional settings** - **When using the Open and Preview actions,display documents in the current window**: checkbox enabled
+            1. **Layout** tab - **Additional Desktop Components** - **Content list checkboxes**: set option to **Show**
         1. Repositories - the environment uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store, ensure that the repository configuration setting for **Display Name** is set to **Corporate Operations**
             1. For the BAW target object store, ensure that the repository configuration setting for **Display Name** is set to **Workflow Operations**        
