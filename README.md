@@ -41,7 +41,7 @@ We assume the following products are installed, up and running:
         1. Document sub-class called **Employment Application** with the three properties created in the step above
     1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
         1. The repository id is **OS1** in the script.  If your repository id is different, update the script with your repository id
-        1. Copy and paste each section and confirm the script executes successfully on your environment 
+        1. Copy and paste each section and confirm the script executes successfully on your environment
     1. Navigator Administration
         1. Desktops - edit your default desktop with the following settings:
             1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
@@ -85,8 +85,8 @@ We assume the following products are installed, up and running:
     1. Login to Business Automation Navigator's admin desktop
     1. Open and connect to the Application Engine Connection, sometimes called APPENGO
     1. Import the application ZIP file
-  1. Edit the details of the application and add appropriate teams to the Permissions table
-  1. Edit the desktop of your choice and on the Layout tab, add the application
+    1. Edit the details of the application and add appropriate teams to the Permissions table
+    1. Edit the desktop of your choice and on the Layout tab, add the application
 
 ## Contributors
   * Lead content developer [Thomas Yang](https://www.linkedin.com/in/thomasyang44/)
