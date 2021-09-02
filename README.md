@@ -1,4 +1,4 @@
-## Onboarding Automation
+## Onboarding automation
 **an IBM Cloud Pak® for Business Automation use case**
 
 ***
