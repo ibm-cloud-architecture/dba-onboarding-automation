@@ -76,17 +76,20 @@ We assume the following products are installed, up and running:
         1. ID => tw.local.ecmDocID
     1. Go back to Workflow Center and create a new snapshot of the process application
     1. Install the new snapshot to your Workflow Server
-    1. In Process Admin Console, go to Installed Apps, Servers and update the Context Path to the Run environment
+    1. In Process Admin Console, go to Installed Apps, Servers and update the Context Path to the Run environment    
 1. Deploy Business Automation Studio artifacts
     1. Import the Onboarding Automation application in Business applications using Onboarding_Automation - App - YYYY.MM.DD_XX.twx
     1. No edit of the application should be required but if an edit is done, create a new snapshot
     1. Export the application as a ZIP
 1. Deploy Business Automation Navigator artifacts
     1. Login to Business Automation Navigator's admin desktop
-    1. Open and connect to the Application Engine Connection, sometimes called APPENGO
-    1. Import the application ZIP file
-    1. Edit the details of the application and add appropriate teams to the Permissions table
-    1. Edit the desktop of your choice and on the Layout tab, add the application
+        1. If using Cloud Pak for Business Automation as a Service: Production -> Manage solutions -> Publish
+        1. If deploying on your own OpenShift environment: use your Navigator URL with `?desktop=appDesktop1` added to the end and use the menu to go to Administration
+    1. Select Connections on the left, edit the Application Engine Connection (generally called `APPENGO`) and connect
+        1. If using Cloud Pak for Business Automation as a Service: import both the automation service and application ZIP files
+        1. If deploying on your own OpenShift environment: import only the application ZIP file
+    1. Edit Details from the application's menu and add appropriate teams to the Permissions table, such as `#AUTHENTICATED-USERS` to make the app available to everyone
+    1. Edit the desktop of your choice (generally `appDesktop1`) and on the Layout tab, select the application
 
 ## Contributors
   * Lead content developer [Thomas Yang](https://www.linkedin.com/in/thomasyang44/)
