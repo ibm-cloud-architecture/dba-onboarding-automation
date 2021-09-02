@@ -31,6 +31,7 @@ We assume the following products are installed, up and running:
     1. For BAW, create a service credential/account
         1. Functional ID alias: OnboardingAutomation
         1. Description: Used by process app Employee Onboarding - Onboard Employee
+        1. Role: Content Platform Engine Role - Class Designer
 1. Deploy Content Services  (for both DEV and RUN)
     1. Login to Aministration Console for Content Engine (ACCE) and create:
         1. Property Templates for:
