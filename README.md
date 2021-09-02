@@ -42,7 +42,7 @@ We assume the following products are installed, up and running:
     1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
     1. Navigator Administration
         1. Desktops - edit your default desktop with the following settings:
-            1. **General** tab - **Additional settings** - **When using the Open and Preview actions,display documents in the current window**: checkbox enabled
+            1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
             1. **Layout** tab - **Additional Desktop Components** - **Content list checkboxes**: set option to **Show**
         1. Repositories - the environment uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store, ensure that the repository configuration setting for **Display Name** is set to **Corporate Operations**
@@ -52,9 +52,12 @@ We assume the following products are installed, up and running:
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Document context menu** to the new menu
             1. Copy the **Default teamspace content list context menu** menu option and add options for **Launch Process** and **Share**
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Teamspace content list context menu** to the new menu
-    1. Navigator Search feature
-        1. Add a search and name it **Employment Application**
-            1. Set Class to Employment Application
+    1. Navigator features
+        1. Search
+            1. Add a search and name it **Employment Application**
+                1. Set Class to Employment Application
+        1. Teamspaces
+            1.  Create **Employee Onboarding** teamspace template as documented in the Getting Started Lab, section [4.1.1 Teamspace Template Builder](https://ibm-cloud-architecture.github.io/refarch-dba/use-cases/onboarding-automation/#lab-section-411).
 1. Deploy BAW artifacts
     1. Login to Workflow Center and navigate to Process Apps
     1. Import Employee_Onboarding - OnboardingAutomation-YYYY.MM.DD_##.twx
