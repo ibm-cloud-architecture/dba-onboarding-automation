@@ -39,18 +39,20 @@ We assume the following products are installed, up and running:
             1. Last Name (String)
             1. Application Date (Date Time)
         1. Document sub-class called **Employment Application** with the three properties created in the step above
-    1. Use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
-    1. Navigator menu options
-        1. Copy the **Default Document Content Menu** menu option and add options for **Launch Process** and **Share**  (Share is only needed for Additional Assets section)
-            1. Update your desktop and update **Context Menus - Content Context Menus** - **Document context menu** to the new menu
-        1. Copy the **Default teamspace content list context menu** menu option and add options for **Launch Process** and **Share**
-            1. Update your desktop and update **Context Menus - Content Context Menus** - **Teamspace content list context menu** to the new menu
-    1. Add a search and name it **Employment Application**
-        1. Set Class to Employment Application
-    1. Environment uses two object stores - the FileNet content object store and the BAW target object store
-        1. For the FileNet content object store, ensure that the repository configuration setting for
-      **Display Name** is set to **Corporate Operations**
-        1. For the BAW target object store, ensure that the repository configuration setting for **Display Name** is set to **Workflow Operations**
+    1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
+    1. Navigator Administration
+        1. Repositories
+            The environment uses two object stores - the FileNet content object store and the BAW target object store
+            1. For the FileNet content object store, ensure that the repository configuration setting for **Display Name** is set to **Corporate Operations**
+            1. For the BAW target object store, ensure that the repository configuration setting for **Display Name** is set to **Workflow Operations**        
+        1. Menus
+            1. Copy the **Default Document Content Menu** menu option and add options for **Launch Process** and **Share**  (Share is only needed for Additional Assets section)
+                1. Update your desktop and update **Context Menus - Content Context Menus** - **Document context menu** to the new menu
+            1. Copy the **Default teamspace content list context menu** menu option and add options for **Launch Process** and **Share**
+                1. Update your desktop and update **Context Menus - Content Context Menus** - **Teamspace content list context menu** to the new menu
+    1. Navigator Search feature
+        1. Add a search and name it **Employment Application**
+            1. Set Class to Employment Application
 1. Deploy BAW artifacts
     1. Login to Workflow Center and navigate to Process Apps
     1. Import Employee_Onboarding - OnboardingAutomation-YYYY.MM.DD_##.twx
