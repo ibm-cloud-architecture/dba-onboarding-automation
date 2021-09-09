@@ -33,12 +33,16 @@ We assume the following products are installed, up and running:
         1. Description: Used by process app Employee Onboarding - Onboard Employee
         1. Role: Content Platform Engine Role - Class Designer
 1. Deploy Content Services  (for both DEV and RUN)
-    1. Login to Aministration Console for Content Engine (ACCE) and create:
-        1. Property Templates for:
+    1. Log into Aministration Console for Content Engine (ACCE) and locate your **Object Store** and perform the following:
+        1. Navigate to **Data Design, Property Templates** and create a Property Templates for:
             1. First Name (String)
             1. Last Name (String)
             1. Application Date (Date Time)
-        1. Document sub-class called **Employment Application** with the three properties created in the step above
+            1. Employee ID (String)
+            1. Onboarded (Boolean)
+            1. Hire Date (Date Time)
+        1. Navigate to **Data Design, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
+        1. Navigate to **Data Design, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
     1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
         1. The repository id is **OS1** in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
@@ -86,8 +90,8 @@ We assume the following products are installed, up and running:
         1. If using Cloud Pak for Business Automation as a Service: Production -> Manage solutions -> Publish
         1. If deploying on your own OpenShift environment: use your Navigator URL with `?desktop=appDesktop1` added to the end and use the menu to go to Administration
     1. Select Connections on the left, edit the Application Engine Connection (generally called `APPENGO`) and connect
-        1. If using Cloud Pak for Business Automation as a Service: import both the automation service and application ZIP files
-        1. If deploying on your own OpenShift environment: import only the application ZIP file
+        1. If using Cloud Pak for Business Automation as a Service: import the application ZIP file
+        1. If deploying on your own OpenShift environment: import the application ZIP file
     1. Edit Details from the application's menu and add appropriate teams to the Permissions table, such as `#AUTHENTICATED-USERS` to make the app available to everyone
     1. Edit the desktop of your choice (generally `appDesktop1`) and on the Layout tab, select the application
 
