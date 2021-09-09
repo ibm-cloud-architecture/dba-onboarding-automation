@@ -33,7 +33,7 @@ We assume the following products are installed, up and running:
         1. Description: Used by process app Employee Onboarding - Onboard Employee
         1. Role: Content Platform Engine Role - Class Designer
 1. Deploy Content Services  (for both DEV and RUN)
-    1. Log into Aministration Console for Content Engine (ACCE) and locate your **Object Store** and perform the following:
+    1. Log into Aministration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
         1. Navigate to **Data Design, Property Templates** and create a Property Templates for:
             1. First Name (String)
             1. Last Name (String)
@@ -51,13 +51,20 @@ We assume the following products are installed, up and running:
             1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
             1. **Layout** tab - **Additional Desktop Components** - **Content list checkboxes**: set option to **Show**
         1. Repositories - the environment uses two object stores - the FileNet content object store and the BAW target object store
-            1. For the FileNet content object store, ensure that the repository configuration setting for **Display Name** is set to **Corporate Operations**
-            1. For the BAW target object store, ensure that the repository configuration setting for **Display Name** is set to **Workflow Operations**        
+            1. For the FileNet content object store:
+                1. Ensure that the repository configuration setting for **General, Display Name** is set to **Corporate Operations**
+                1. Set **Browse** configuration, **Selected Properties** for:
+                        1.  **Show in Details View**: Name, Content Size, Last Modifier, Date Last Modified, Major Version Number, Description
+                        1.  **Show in Magazine View**: Name, Last Modifier, Date Last Modified, Likes, Tags, Downloads, Comments
+            1. For the BAW target object store, ensure that the repository configuration setting for **General, Display Name** is set to **Workflow Operations**        
         1. Menus
             1. Copy the **Default Document Content Menu** menu option and add options for **Launch Process** and **Share**  (Share is only needed for Additional Assets section)
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Document context menu** to the new menu
             1. Copy the **Default teamspace content list context menu** menu option and add options for **Launch Process** and **Share**
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Teamspace content list context menu** to the new menu
+        1. Viewer Maps - ensure that the first two viewers are set:
+            1. Repository Type=FileNet Conent Mananger, Viewer=Video Viewer, File Type=video/mp4, video/x-m4v, video/webm, video/quicktime, audio/mpeg, audio/mp4, audio/x-m4a, audio/x-m4b
+            1. Repository Type=FileNet Conent Mananger, Viewer=Daeja VidewONE Virtual, File Type=All file types
     1. Navigator features
         1. Search
             1. Add a search and name it **Employment Application**
