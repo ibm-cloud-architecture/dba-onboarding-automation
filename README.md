@@ -46,6 +46,20 @@ We assume the following products are installed, up and running:
     1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
         1. The repository id is **OS1** in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
+        1. Review the folder structure for: Focus Corp / Human Resources / Onboarded Employees
+            1. Manually recreate the existing folders (Jeff Goodhue, Kathryn Tirador, Lauren Mayes, Selena Swift, Thomas Yang) using the **Employee** folder class.  
+                1. Set the First Name, Last Name, Employee ID, Onboarded, and Hire Date properties for each subfolder
+                    1. Folder Names: Jeff Goodhue, Kathryn Tirador, Lauren Mayes, Selena Swift, Thomas Yang
+                    1. First Name - use the first name based on the folder name
+                    1. Last Name - use the last name baed on the folder name
+                    1. Employee ID - specify any string value (ie. FC939398)
+                    1. Onboarded - set to True
+                    1. Hire Date - specify any date
+            1. For the Selena Swift folder, create two subfolders called **Employee Packet** and **Photos** and add following content:
+                1.  For Employee Packet, add the two documents from the GitHub source: **content-services / sample-content / Selena Swift / Employee Packet**
+                    1. Confidentiality Agreement.pdf
+                    1. Employee Manual.docx
+                1.  For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
     1. Navigator Administration
         1. Desktops - edit your default desktop with the following settings:
             1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
