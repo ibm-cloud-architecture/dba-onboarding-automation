@@ -76,15 +76,15 @@ We assume the following products are installed, up and running:
         1. Viewer Maps - ensure that the first two viewers are set:
             1. Repository Type=FileNet Conent Mananger, Viewer=Video Viewer, File Type=video/mp4, video/x-m4v, video/webm, video/quicktime, audio/mpeg, audio/mp4, audio/x-m4a, audio/x-m4b
             1. Repository Type=FileNet Conent Mananger, Viewer=Daeja VidewONE Virtual, File Type=All file types
-            1. Desktops - edit your default desktop with the following settings:
-                1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
-                1. **Repositories** - selected repositories: Workflow Operations, Corporate Operations, and optionally FPOS for Records Management
-                1. **Layout** tab
-                    1. **Displayed features** - Home, Browse, Search, Share, Teamspaces, Entry Template Manager, Work, Work Dashboard, Cases, Reports
-                    1. **Default feature** - Home
-                    1. **Additional Desktop Components**
-                        1. **Document thumbnails**: set option to **Show**
-                        1. **Content list checkboxes**: set option to **Show**
+        1. Desktops - edit your default desktop with the following settings:
+            1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
+            1. **Repositories** tab - selected repositories: Workflow Operations, Corporate Operations, and optionally FPOS for Records Management
+            1. **Layout** tab
+                1. **Displayed features** - Home, Browse, Search, Share, Teamspaces, Entry Template Manager, Work, Work Dashboard, Cases, Reports
+                1. **Default feature** - Home
+                1. **Additional Desktop Components**
+                    1. **Document thumbnails**: set option to **Show**
+                    1. **Content list checkboxes**: set option to **Show**
     1. Navigator features
         1. Search
             1. Add a search and name it **Employment Application**
