@@ -41,8 +41,8 @@ We assume the following products are installed, up and running:
             1. Employee ID (String)
             1. Onboarded (Boolean)
             1. Hire Date (Date Time)
-        1. Navigate to **Data Design, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
-        1. Navigate to **Data Design, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
+        1. Navigate to **Data Design, Classes, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
+        1. Navigate to **Data Design, Classes, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
     1. Using GraphiQL, use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
         1. The repository id is **OS1** in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
@@ -63,7 +63,13 @@ We assume the following products are installed, up and running:
     1. Navigator Administration
         1. Desktops - edit your default desktop with the following settings:
             1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
-            1. **Layout** tab - **Additional Desktop Components** - **Content list checkboxes**: set option to **Show**
+            1. **Repositories** - selected repositories: Workflow Operations, Corporate Operations, and optionally FPOS for Records Management
+            1. **Layout** tab
+                1. **Displayed features** - Home, Browse, Search, Share, Teamspaces, Entry Template Manager, Work, Work Dashboard, Cases, Reports
+                1. **Default feature** - Home
+                1. **Additional Desktop Components**
+                    1. **Document thumbnails**: set option to **Show**
+                    1. **Content list checkboxes**: set option to **Show**
         1. Repositories - the environment uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store:
                 1. Ensure that the repository configuration setting for **General, Display Name** is set to **Corporate Operations**
