@@ -76,11 +76,17 @@ We assume the following products are installed, up and running:
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Document context menu** to the new menu
             1. Copy the **Default teamspace content list context menu** menu option and add options for **Launch Process** and **Share**
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Teamspace content list context menu** to the new menu
-        1. Viewer Maps - ensure that the first two viewers are set:
-            1. Repository Type=FileNet Conent Mananger, Viewer=Video Viewer, File Type=video/mp4, video/x-m4v, video/webm, video/quicktime, audio/mpeg, audio/mp4, audio/x-m4a, audio/x-m4b
+        1. Viewer Maps - ensure that the first two viewers are set for:
+            1. Repository Type=FileNet Conent Mananger, Viewer=Video Viewer, File Type=video/mp4, video/x-m4v, video/webm, video/quicktime, audio/mpeg, audio/mp4, audio/x-m4a, audio/x-m4b (select all the video/audio formats)
             1. Repository Type=FileNet Conent Mananger, Viewer=Daeja VidewONE Virtual, File Type=All file types
         1. Desktops - edit your default desktop with the following settings:
-            1. **General** tab - **Additional settings** - **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
+            1. **General** tab
+                1. **Desktop Configuration** section
+                    1. **Viewer map** - set to the viewer map created in the prior step above
+                    1. **Additional settings**
+                        1. **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
+                        1. **Enable this desktop for FileNet P8 workflow email notification** - checkbox enabled
+                    1. **Document History** - set to Enable
             1. **Repositories** tab - selected repositories: Workflow Operations, Corporate Operations, and optionally FPOS for Records Management
             1. **Layout** tab
                 1. **Displayed features** - Home, Browse, Search, Share, Teamspaces, Entry Template Manager, Work, Work Dashboard, Cases, Reports
