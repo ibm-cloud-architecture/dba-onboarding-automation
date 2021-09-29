@@ -1,8 +1,8 @@
-Automation Onboarding - Focus Corp Folder Structure
+# Automation Onboarding - Focus Corp Folder Structure
 
-======================================
-Focus Corp - Root Folders
-======================================
+#======================================
+#Focus Corp - Root Folders
+#======================================
 mutation {
   cf0: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Focus Corp", parent: {identifier: "/"}}) {id}
   cf1: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Contracts", parent: {identifier: "/Focus Corp"}}) {id}
@@ -18,9 +18,9 @@ mutation {
   cf11: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Travel", parent: {identifier: "/Focus Corp"}}) {id}
 }
 
-======================================
-Focus Corp - Subfolders
-======================================
+#======================================
+#Focus Corp - Subfolders
+#======================================
 mutation {
   cf1: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Service Contracts", parent: {identifier: "/Focus Corp/Contracts"}}) {id}
   cf2: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Applications", parent: {identifier: "/Focus Corp/Customer"}}) {id}
@@ -44,9 +44,9 @@ mutation {
   cf20: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Travel Contracts", parent: {identifier: "/Focus Corp/Travel"}}) {id}
 }
 
-======================================
-Focus Corp - HR / Onboarded Employees
-======================================
+#======================================
+#Focus Corp - HR / Onboarded Employees
+#======================================
 mutation {
   cf0: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Onboarded Employees", parent: {identifier: "/Focus Corp/Human Resources"}}) {id}
   cf1: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Jeff Goodhue", parent: {identifier: "/Focus Corp/Human Resources/Onboarded Employees"}}) {id}
@@ -58,9 +58,9 @@ mutation {
   cf21: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Photos", parent: {identifier: "/Focus Corp/Human Resources/Onboarded Employees/Selena Swift"}}) {id}
 }
 
-======================================
-Focus Corp - Technology Enablement
-======================================
+#======================================
+#Focus Corp - Technology Enablement
+#======================================
 mutation {
   cf0: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Automation Onboarding", parent: {identifier: "/Focus Corp/Technology Enablement"}}) {id}
   cf1: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Employment Application", parent: {identifier: "/Focus Corp/Technology Enablement/Automation Onboarding"}}) {id}
