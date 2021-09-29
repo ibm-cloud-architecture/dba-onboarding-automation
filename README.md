@@ -79,10 +79,14 @@ We assume the following products are installed, up and running:
         1. Viewer Maps - ensure that the first two viewers are set for:
             1. Repository Type=FileNet Conent Mananger, Viewer=Video Viewer, File Type=video/mp4, video/x-m4v, video/webm, video/quicktime, audio/mpeg, audio/mp4, audio/x-m4a, audio/x-m4b (select all the video/audio formats)
             1. Repository Type=FileNet Conent Mananger, Viewer=Daeja VidewONE Virtual, File Type=All file types
+            1. Update your desktop and update **Viewer map** setting to use this viewer map
         1. Desktops - edit your default desktop with the following settings:
             1. **General** tab
                 1. **Desktop Configuration** section
-                    1. **Viewer map** - set to the viewer map created in the prior step above
+                    1. **Merge and Split** - set to Enable
+                    1. **Sync services** - set to Enable
+                    1. **Edit Service** - set to Enable
+                    1. **Office for the web service** - set to Enable and Allow collaborative editing
                     1. **Additional settings**
                         1. **When using the Open and Preview actions, display documents in the current window**: checkbox enabled
                         1. **Enable this desktop for FileNet P8 workflow email notification** - checkbox enabled
