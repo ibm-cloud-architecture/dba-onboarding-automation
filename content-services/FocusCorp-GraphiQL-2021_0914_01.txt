@@ -46,6 +46,7 @@ mutation {
 
 #======================================
 #Focus Corp - HR / Onboarded Employees
+#Required Document subclass: Employee
 #======================================
 mutation {
   cf0: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Onboarded Employees", parent: {identifier: "/Focus Corp/Human Resources"}}) {id}
