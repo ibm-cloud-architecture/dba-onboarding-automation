@@ -113,6 +113,16 @@ We assume the following products are installed, up and running:
                     1. **Document thumbnails**: set option to **Show**
                     1. **Status bar**: set option to **Show**
                     1. **Content list checkboxes**: set option to **Show**
+        1. Role Based Redaction
+            1. Create an **Access Management** group called **TE_OnboardingAutomation_Redaction**
+                1. Add any users that need to create and view annotations into this group
+            1. From Navigator Administration, select **Role-based Redactions** and set up the following:
+                1. **Reasons** - create/validate that the following reasons exists:  Credit Card Number, Social Security Number, PII (Personally Identifiable Information)
+                1. **Policies and Roles**
+                    1. **Policy** - create a policy named **TE Redaction Policy** and include the redaction reasons identified above
+                    1. **Redaction Roles**
+                        1. **Editor** - create an editor redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
+                        1. **Viewer** - create an viewer redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
     1. Navigator features
         1. Search
             1. Create a search with following properties:
