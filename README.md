@@ -114,8 +114,12 @@ We assume the following products are installed, up and running:
                     1. **Status bar**: set option to **Show**
                     1. **Content list checkboxes**: set option to **Show**
         1. Role Based Redaction
-            1. Create an **Access Management** group called **TE_OnboardingAutomation_Redaction**
-                1. Add any users that need to create and view annotations into this group
+            1. If using Cloud Pak for Business Automation as a Service:
+              1. Create an **Access Management** group called **TE_DEMO**
+                  1. Add any users that need access to content in this group
+                1. Create an **Access Management** group called **TE_OnboardingAutomation_Redaction**
+                    1. Add any users that need to create and view annotations into this group
+                    1. Add the **TE_DEMO** group to this group                    
             1. From Navigator Administration, select **Role-based Redactions** and set up the following:
                 1. **Reasons** - create/validate that the following reasons exists:  Credit Card Number, Social Security Number, PII (Personally Identifiable Information)
                 1. **Policies and Roles**
@@ -123,6 +127,19 @@ We assume the following products are installed, up and running:
                     1. **Redaction Roles**
                         1. **Editor** - create an editor redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
                         1. **Viewer** - create an viewer redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
+            1. Optional - to enable modification of Focus Corp folder: \Focus Corp\Human Resources\Onboarded\Employees\Unsecured
+                1. From Navigator, select the **Unsecured** folder and perform the following:
+                    1. Update the security on the folder:
+                        1. Remove **Authenicated users** from permission **Reader**
+                        1. Add **Authenicated users** with **Author** permission.  Note: this is selected as an **Alias Account**
+                    1. For Employee Packet, add the two documents from the GitHub source: **content-services / sample-content / Selena Swift / Employee Packet**
+                        1. Confidentiality Agreement.pdf (Class: Document)
+                        1. Employee Manual.docx (Class: Document)
+                        1. Focus Corp - Employment Application.pdf (Class: Employment Application)
+                            1. First Name: Selena
+                            1. Last Name: Swift
+                            1. Application Date: specify any date
+                    1.  For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
     1. Navigator features
         1. Search
             1. Create a search with following properties:
