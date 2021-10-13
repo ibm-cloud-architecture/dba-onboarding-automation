@@ -61,7 +61,7 @@ We assume the following products are installed, up and running:
                     1. Focus Corp - Employment Application.pdf (Class: Employment Application)
                         1. First Name: Selena
                         1. Last Name: Swift
-                        1. Application Date: <specify any date
+                        1. Application Date: \<specify any date\>
                 1.  For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
     1. Navigator Administration
         1. Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
