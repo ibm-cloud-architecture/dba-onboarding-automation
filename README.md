@@ -61,7 +61,7 @@ We assume the following products are installed, up and running:
                     1. Focus Corp - Employment Application.pdf (Class: Employment Application)
                         1. First Name: Selena
                         1. Last Name: Swift
-                        1. Application Date: <specify any date>
+                        1. Application Date: <specify any date
                 1.  For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
     1. Navigator Administration
         1. Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
@@ -140,7 +140,7 @@ We assume the following products are installed, up and running:
     1. Import Employee_Onboarding - OnboardingAutomation-YYYY.MM.DD_##.twx
     1. Open the Onboarding Automation process app and navigate to Process App Settings -> Servers
         1. Edit the settings for hostname, port, context path, repository, user id, password and so forth for your **Enterprise Content Management Server**
-            1.  Example values: demo-emea-03.automationcloud.ibm.com, 443, /dba/dev/openfncmis_wlp/services11, OS1, <service id>, <service id password>
+            1.  Example values: demo-emea-03.automationcloud.ibm.com, 443, /dba/dev/openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
         1. Use the **Test connection** button to validate connectivity
     1. Confirm settings for process: **Onboard Employee** - **Start**  
         1. General - Event Properties: Type should be set to **Employment Application**
