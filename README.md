@@ -139,7 +139,6 @@ We assume the following products are installed, up and running:
                 1. **Save in** - Corporate Operations / Focus Corp / X Configuration
                 1. **Class** - Employment Application
                 1. **Share search with** - **Everyone in my company**
-                1.
         1. Teamspaces
             1.  Create **Employee Onboarding** teamspace template as documented in the Getting Started Lab, section [4.1.1 Teamspace Template Builder](https://ibm-cloud-architecture.github.io/refarch-dba/use-cases/onboarding-automation/#lab-section-411).
                 1.  **Share template with** - set to **Everyone in my company**
