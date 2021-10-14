@@ -9,7 +9,7 @@
 
 **Choose an option:**
 
-  * **Cloud Pak for Business Automation as a Service demo environment (likely an IBMer):** your environment is predeployed, continue to the [Getting Started Lab](https://ibm-cloud-architecture.github.io/refarch-dba/use-cases/onboarding-automation/#getting-started-lab).
+  * **Cloud Pak for Business Automation as a Service demo environment (likely an IBMer):** your environment is pre-deployed, continue to the [Getting Started Lab](https://ibm-cloud-architecture.github.io/refarch-dba/use-cases/onboarding-automation/#getting-started-lab).
   * **Install Yourself:** To deploy Onboarding Automation on your own environment, continue reading.
 
 ### Environment
@@ -44,16 +44,16 @@ We assume the following products are installed, up and running:
             1. Hire Date (Date Time)
         1. Navigate to **Data Design, Classes, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
         1. Navigate to **Data Design, Classes, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
-    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/), use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
-        1. The repository id is **OS1** in the script.  If your repository id is different, update the script with your repository id
+    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/), use the `FocusCorp-GraphiQL-YYYY_MMDD_NN.txt` script to create the Focus Corp folder structure
+        1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
-    1. Sample Content - using the Navigator Browse feature, navigate to the `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` folder and perform the following:
-        1. For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
+    1. Sample Content - using the Navigator Browse feature, navigate to folder `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` and perform the following:
+        1. For Photos, add the images from the GitHub source: `Content-services / sample-content / Selena Swift / Photos`
         1. For Employee Packet - choose one of the methods below:
             1. Using CURL/GraphQL
-                1. Review and execute script: **content-services / sample-content / FocusCorp-Content-GraphQL.txt**
+                1. Review and execute the GitHub script: `**content-services / sample-content / FocusCorp-Content-GraphQL.txt`
             1. Manual process using Navigator
-                1. Download the images from: **content-services / sample-content / Selena Swift / Employee Packet** and manually upload the following:
+                1. Download the images from the GitHub source: `content-services / sample-content / Selena Swift / Employee Packet` and manually upload the following:
                     1. Confidentiality Agreement.pdf (Class: Document)
                     1. Employee Manual.docx (Class: Document)
                     1. Focus Corp - Employment Application.pdf (Class: Employment Application)
@@ -61,8 +61,8 @@ We assume the following products are installed, up and running:
                         1. Last Name: Swift
                         1. Application Date: specify any date
         1. Optional - Unsecured folder content
-            1. Repeat the last two (Photos and Employee Packet) for folder: **\Focus Corp\Human Resources\Onboarded\Employees\Unsecured**
-        1. Optional - TE_DEMO group **Author** permission to folder: **\Focus Corp\Human Resources\Onboarded\Employees\Unsecured**
+            1. Repeat the last two (Photos and Employee Packet) for folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
+        1. Optional - TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
             1. From Navigator, select the **Unsecured** folder and perform the following:
                   1. Update the security permission on the folder:
                       1. Remove **Authenicated users** from permission **Reader**
