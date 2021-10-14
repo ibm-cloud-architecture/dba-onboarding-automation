@@ -47,7 +47,7 @@ We assume the following products are installed, up and running:
     1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/), use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
         1. The repository id is **OS1** in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
-    1. Sample Content - using the Navigator Browse feature, navigate to the '\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift' folder and perform the following:
+    1. Sample Content - using the Navigator Browse feature, navigate to the `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` folder and perform the following:
         1. For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
         1. For Employee Packet - choose one of the methods below:
             1. Using CURL/GraphQL
