@@ -48,10 +48,10 @@ We assume the following products are installed, up and running:
         1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
     1. Sample Content - using the Navigator Browse feature, navigate to folder `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` and perform the following:
-        1. For Photos, add the images from the GitHub source: `Content-services / sample-content / Selena Swift / Photos`
+        1. For Photos, add the images from the GitHub source: `content-services / sample-content / Selena Swift / Photos`
         1. For Employee Packet - choose one of the methods below:
             1. Using CURL/GraphQL
-                1. Review and execute the GitHub script: `**content-services / sample-content / FocusCorp-Content-GraphQL.txt`
+                1. Review and execute the GitHub script: `content-services / sample-content / FocusCorp-Content-GraphQL.txt`
             1. Manual process using Navigator
                 1. Download the images from the GitHub source: `content-services / sample-content / Selena Swift / Employee Packet` and manually upload the following:
                     1. Confidentiality Agreement.pdf (Class: Document)
