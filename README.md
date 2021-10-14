@@ -168,7 +168,7 @@ We assume the following products are installed, up and running:
             1. Click the **Apply** button to save the configuration
 1. Deploy Business Automation Studio artifacts
     1. From the Development environment, select **Build, Studio**
-    1. From **Business applications**, import the Onboarding Automation application using Onboarding_Automation - App - YYYY.MM.DD_XX.twx
+    1. From **Business applications**, import the Onboarding Automation application using `Onboarding_Automation - App - YYYY.MM.DD_XX.twx`
     1. No edit of the application should be required but if an edit is done, create a new snapshot
     1. Export the application - select **Export this version to be published (.zip)**
 1. Deploy Business Automation Navigator artifacts
