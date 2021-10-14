@@ -28,12 +28,13 @@ We assume the following products are installed, up and running:
 
 1. Determine your credentials
     1. For Content Services, use your own credentials to login into IBM Content Navigator
-    1. For BAW, create a service credential/account
+    1. Create a service credential/account.  
         1. Functional ID alias: OnboardingAutomation
         1. Description: Used by process app Employee Onboarding - Onboard Employee
         1. Role: Content Platform Engine Role - Class Designer
+        1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
 1. Deploy Content Services
-    1. Log into Aministration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
+    1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
         1. Navigate to **Data Design, Property Templates** and create property templates for:
             1. First Name (String)
             1. Last Name (String)
@@ -43,26 +44,29 @@ We assume the following products are installed, up and running:
             1. Hire Date (Date Time)
         1. Navigate to **Data Design, Classes, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
         1. Navigate to **Data Design, Classes, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
-    1. Using GraphiQL (SaaS example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/), use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
+    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/), use the FocusCorp-GraphiQL-YYYY_MMDD_NN.txt script to create the Focus Corp folder structure
         1. The repository id is **OS1** in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
-        1. Using Navigator, review the folder structure for: Focus Corp / Human Resources / Onboarded Employees
-            1. Set the First Name, Last Name, Employee ID, Onboarded, and Hire Date properties for each subfolder (Jeff Goodhue, Kathryn Tirador, Lauren Mayes, Selena Swift, Thomas Yang)
-                1. Folder Names: Jeff Goodhue, Kathryn Tirador, Lauren Mayes, Selena Swift, Thomas Yang
-                1. First Name - use the first name based on the folder name
-                1. Last Name - use the last name baed on the folder name
-                1. Employee ID - specify any string value (ie. FC939398)
-                1. Onboarded - set to True
-                1. Hire Date - specify any date
-            1. Navigate to the Selena Swift folder and perform the following:
-                1.  For Employee Packet, add the two documents from the GitHub source: **content-services / sample-content / Selena Swift / Employee Packet**
+    1. Sample Content - using the Navigator Browse feature, navigate to the **\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift** folder and perform the following:
+        1. For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
+        1. For Employee Packet - choose one of the methods below:
+            1. Using CURL/GraphQL
+                1. Review and execute script: **content-services / sample-content / FocusCorp-Content-GraphQL.txt**
+            1. Manual process using Navigator
+                1. Download the images from: **content-services / sample-content / Selena Swift / Employee Packet** and manually upload the following:
                     1. Confidentiality Agreement.pdf (Class: Document)
                     1. Employee Manual.docx (Class: Document)
                     1. Focus Corp - Employment Application.pdf (Class: Employment Application)
                         1. First Name: Selena
                         1. Last Name: Swift
                         1. Application Date: specify any date
-                1.  For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
+        1. Optional - Unsecured folder content
+            1. Repeat the last two (Photos and Employee Packet) for folder: **\Focus Corp\Human Resources\Onboarded\Employees\Unsecured**
+        1. Optional - TE_DEMO group **Author** permission to folder: **\Focus Corp\Human Resources\Onboarded\Employees\Unsecured**
+            1. From Navigator, select the **Unsecured** folder and perform the following:
+                  1. Update the security permission on the folder:
+                      1. Remove **Authenicated users** from permission **Reader**
+                        1. Add **Authenicated users** with **Author** permission.  Note: this is selected as an **Alias Account**                            
     1. Navigator Administration
         1. Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store:
@@ -127,19 +131,6 @@ We assume the following products are installed, up and running:
                     1. **Redaction Roles**
                         1. **Editor** - create an editor redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
                         1. **Viewer** - create an viewer redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
-            1. Optional - to enable modification of Focus Corp folder: \Focus Corp\Human Resources\Onboarded\Employees\Unsecured
-                1. From Navigator, select the **Unsecured** folder and perform the following:
-                    1. Update the security on the folder:
-                        1. Remove **Authenicated users** from permission **Reader**
-                        1. Add **Authenicated users** with **Author** permission.  Note: this is selected as an **Alias Account**
-                    1. For Employee Packet, add the two documents from the GitHub source: **content-services / sample-content / Selena Swift / Employee Packet**
-                        1. Confidentiality Agreement.pdf (Class: Document)
-                        1. Employee Manual.docx (Class: Document)
-                        1. Focus Corp - Employment Application.pdf (Class: Employment Application)
-                            1. First Name: Selena
-                            1. Last Name: Swift
-                            1. Application Date: specify any date
-                    1.  For Photos, add the images from the GitHub source: **content-services / sample-content / Selena Swift / Photos**
     1. Navigator features
         1. Search
             1. Create a search with following properties:
