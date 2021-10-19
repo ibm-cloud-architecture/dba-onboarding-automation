@@ -127,10 +127,10 @@ We assume the following products are installed, up and running:
             1. From Navigator Administration, select **Role-based Redactions** and set up the following:
                 1. **Reasons** - create/validate that the following reasons exists:  Credit Card Number, Social Security Number, PII (Personally Identifiable Information)
                 1. **Policies and Roles**
-                    1. **Policy** - create a policy named **TE Redaction Policy** and include the redaction reasons identified above
                     1. **Redaction Roles**
                         1. **Editor** - create an editor redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
-                        1. **Viewer** - create an viewer redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
+                        1. **Viewer** - create an viewer redaction role named **TE Redaction Viewer** and include group **TE_OnboardingAutomation_Redaction** (or simply include the editor role created above)
+                    1. **Policy** - create a policy named **TE Redaction Policy** and include the redaction reasons and roles identified above
     1. Navigator features
         1. Search
             1. Create a search with following properties:
