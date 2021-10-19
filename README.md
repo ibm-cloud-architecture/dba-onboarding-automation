@@ -122,9 +122,9 @@ We assume the following products are installed, up and running:
             1. If using Cloud Pak for Business Automation as a Service:
               1. Create an **Access Management** group called **TE_DEMO**
                   1. Add any users that need access to content in this group
-                1. Create an **Access Management** group called **TE_OnboardingAutomation_Redaction**
-                    1. Add any users that need to create and view annotations into this group
-                    1. Add the **TE_DEMO** group to this group                    
+                  1. Create an **Access Management** group called **TE_OnboardingAutomation_Redaction**
+                      1. Add any users that need to create and view annotations into this group
+                      1. Add the **TE_DEMO** group to this group                    
             1. From Navigator Administration, select **Role-based Redactions** and set up the following:
                 1. **Reasons** - create/validate that the following reasons exists:  Credit Card Number, Social Security Number, PII (Personally Identifiable Information)
                 1. **Policies and Roles**
