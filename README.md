@@ -29,9 +29,9 @@ We assume the following products are installed, up and running:
 1. Determine your credentials
     1. For Content Services, use your own credentials to login into IBM Content Navigator
     1. Create a service credential/account.  
-        1. Functional ID alias: OnboardingAutomation
-        1. Description: Used by process app Employee Onboarding - Onboard Employee
-        1. Role: no specific role is required, just need access to the environment
+        1. Functional ID alias: `OnboardingAutomation`
+        1. Description: `Used by process app Employee Onboarding - Onboard Employee`
+        1. Role: `Content Platform Engine Role - Class Designer`
         1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
 1. Deploy Content Services
     1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
