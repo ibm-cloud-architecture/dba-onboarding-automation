@@ -3,7 +3,7 @@ CURL commands to upload to document to Focus Corp
 #================
 Step 1
 #================
-Download the following content from GitHub to a local folder accessing to your URL environment:
+Download the following content from GitHub to a local folder accessible to your CURL environment:
 
 Documents:
   https://github.com/ibm-cloud-architecture/dba-onboarding-automation/tree/main/content-services/sample-content/Selena%20Swift/Employee%20Packet
@@ -31,7 +31,7 @@ Do a search and replace for the service account login and password below - repla
 #================
 Step 4
 #================
-Execute each CURL command separately below, ensure that the files accessing from your CURL environment
+Execute each CURL command separately below, ensure that the files accessible from your CURL environment
 
 
 #==============================================================
