@@ -79,11 +79,18 @@ mutation {
 
 #======================================
 #Focus Corp - HR / Selena Swift Subfolders
-#Required Document subclass: Employment Application
 #======================================
 mutation {
   cf20: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Employee Packet", parent: {identifier: "/Focus Corp/Human Resources/Onboarded Employees/Selena Swift"}}) {id}
   cf21: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Photos", parent: {identifier: "/Focus Corp/Human Resources/Onboarded Employees/Selena Swift"}}) {id}
+}
+
+#======================================
+#Focus Corp - HR / Unsecured Subfolders
+#======================================
+mutation {
+  cf20: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Employee Packet", parent: {identifier: "/Focus Corp/Human Resources/Onboarded Employees/Unsecured"}}) {id}
+  cf21: createFolder(repositoryIdentifier: "OS1", folderProperties: {name: "Photos", parent: {identifier: "/Focus Corp/Human Resources/Onboarded Employees/Unsecured"}}) {id}
 }
 
 #======================================
