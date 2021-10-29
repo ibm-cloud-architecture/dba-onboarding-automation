@@ -28,6 +28,7 @@ We assume the following products are installed, up and running:
 
 1. Determine your credentials
     1. For Content Services, use your own credentials to login into IBM Content Navigator
+        1. Ensure you have the `Account Admin` and a `Content Platform Engine Role` permission
     1. From `Access Management`, create the following:
         1. `Service credientials`
             1. Functional ID alias: `OnboardingAutomation`
