@@ -68,13 +68,12 @@ We assume the following products are installed, up and running:
                         1. First Name: Selena
                         1. Last Name: Swift
                         1. Application Date: specify any date
-        1. Optional - Unsecured folder content
-            1. Repeat the last two steps (Photos and Employee Packet) for folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
         1. Optional - TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
             1. From Navigator, select the **Unsecured** folder and perform the following:
-                  1. Update the security permission on the folder:
-                      1. Remove **Authenicated users** from permission **Reader**
-                        1. Add **Authenicated users** with **Author** permission.  Note: this is selected as an **Alias Account**                            
+                1. Update the security permission on the folder:
+                    1. Remove **Authenicated users** from permission **Reader**
+                    1. Add **Authenicated users** with **Author** permission.  Note: this is selected as an **Alias Account**
+                1. Repeat the step above for any subfolders                            
     1. Navigator Administration
         1. Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store:
