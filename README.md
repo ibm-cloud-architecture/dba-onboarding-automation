@@ -27,19 +27,23 @@ We assume the following products are installed, up and running:
 ### Deploy the artifacts
 
 1. Determine your credentials
-    1. For Content Services, use your own credentials to login into IBM Content Navigator
-        1. Ensure you have the `Account Admin` and a `Content Platform Engine Role` permission
-    1. From `Access Management`, create the following:
-        1. `Service credientials`
-            1. Functional ID alias: `OnboardingAutomation`
-              1. Description: `Used by process app Employee Onboarding - Onboard Employee`
-              1. Role: `Content Platform Engine Role - Class Designer`
-              1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
-        1. `Groups`
-            1. Group: **TE_DEMO**
-                1. Add any additionals users that need access to content in this group
-            1. Group: **TE_OnboardingAutomation_Redaction**
-                1. Add the **TE_DEMO** group to this group           
+    1. If using Cloud Pak for Business Automation as a Service (CP4BAaaS):
+        1. You will use a single login to access CPE, BAS and BAW
+        1. Additionally, create the following from `Access Management`
+            1. `Service credientials`
+                1. Functional ID alias: `OnboardingAutomation`
+                  1. Description: `Used by process app Employee Onboarding - Onboard Employee`
+                  1. Role: `Content Platform Engine Role - Class Designer`
+                  1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
+            1. `Groups`
+                1. Group: **TE_DEMO**
+                    1. Add any additionals users that need access to content in this group
+                1. Group: **TE_OnboardingAutomation_Redaction**
+                    1. Add the **TE_DEMO** group to this group           
+    1. If deploying on your own OpenShift environment:
+        * Make sure you have a login to all required components above
+    1. If deploying on your own OpenShift environment based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS):
+        * Install the `oc` CLI from the **Client-side requirements** here: [V21.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-demo-deployment).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
 1. Deploy Content Services
     1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
         1. Navigate to **Data Design, Property Templates** and create property templates for:
@@ -161,7 +165,9 @@ We assume the following products are installed, up and running:
                 1. **Share search with** - **Everyone in my company**
         1. Teamspaces
             1.  Create **Employee Onboarding** teamspace template as documented in the Getting Started Lab, section [4.1.1 Teamspace Template Builder](https://ibm-cloud-architecture.github.io/refarch-dba/use-cases/onboarding-automation/#lab-section-411).
-                1.  **Share template with** - set to **Everyone in my company**
+                1. Template name: **Employee Onboarding**
+                1. Template description: **Teamspace Template for Employee Onboarding**
+                1. Share template with**: **Everyone in my company**
 1. Deploy BAW artifacts
     1. Login to **Workflow Center** and navigate to **Process Apps**
     1. Import Employee_Onboarding - OnboardingAutomation-YYYY.MM.DD_##.twx
