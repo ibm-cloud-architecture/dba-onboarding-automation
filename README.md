@@ -128,7 +128,7 @@ We assume the following products are installed, up and running:
                 1. **Reasons** - create/validate that the following reasons exists:  
                     1. Credit Card Number (should already be created)
                     2. Social Security Number (should already be created)
-                    3. Name: PII \n
+                    3. Name: PII  
                        Description: Personally Identifiable Information
                 1. **Policies and Roles**
                     1. **Redaction Roles**
