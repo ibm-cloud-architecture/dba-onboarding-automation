@@ -131,10 +131,20 @@ We assume the following products are installed, up and running:
                     3. Name: PII  
                        Description: Personally Identifiable Information
                 1. **Policies and Roles**
-                    1. **Redaction Roles**
-                        1. **Editor** - create an editor redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
-                        1. **Viewer** - create an viewer redaction role named **TE Redaction Viewer** and include group **TE_OnboardingAutomation_Redaction** (or simply include the editor role created above)
-                    1. **Policy** - create a policy named **TE Redaction Policy** and include the redaction reasons and roles identified above
+                    1. Connect to your repository: `Corporate Operations`
+                    1. **Redaction Roles** - click `New Redaction Role`
+                        1. `TE Redaction Editor`
+                            1. Name: **TE Redaction Editor**
+                            1. Type: **Editor**
+                            1. Description: **TE Redaction Editor**
+                            1. Membership: click **New Editors**
+                                1. Add group: **TE_OnboardingAutomation_Redaction**
+                        1. `TE Redaction Viewer`
+                            1. Name: **TE Redaction Viewer**
+                            1. Type: **Viewer**
+                            1. Description: **TE Redaction Viewer**
+                            1. Membership: **Editors**
+                                1. Add existing editors: **TE_OnboardingAutomation_Redaction**
     1. Navigator features
         1. Search
             1. Create a search with following properties:
