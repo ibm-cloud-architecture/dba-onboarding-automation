@@ -44,17 +44,17 @@ We assume the following products are installed, up and running:
             1. Hire Date (Date Time)
         1. Navigate to **Data Design, Classes, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
         1. Navigate to **Data Design, Classes, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
-    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/): use the `dba-onboarding-automation/content-services/FocusCorp-GraphQL-Data-2021_1018_01.txtFocusCorp-GraphiQL-YYYY_MMDD_NN.txt` script to create the Focus Corp folder structure
-        1. Download and review and execute the GitHub script: `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
+    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/)
+        1. Download and review the GitHub script: `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
         1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
     1. Sample Content - using the Navigator Browse feature, navigate to folder `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` and perform the following:
-        1. For Photos, add the images from the GitHub source: `content-services / sample-content / Selena Swift / Photos`
+        1. For Photos - add the images to the `Photos` subfolder from the GitHub source: `content-services / sample-content / Selena Swift / Photos`
         1. For Employee Packet - choose one of the methods below:
             1. Using CURL/GraphQL
                 1. Review and execute the GitHub script: `content-services / graphql / FocusCorp-GraphQL-Data-YYYYY_MMDD-XX.txt`
             1. Manual process using Navigator
-                1. Download the images from the GitHub source: `content-services / sample-content / Selena Swift / Employee Packet` and manually upload the following:
+                1. Download the content from the GitHub source: `content-services / sample-content / Selena Swift / Employee Packet` and manually upload the following:
                     1. Confidentiality Agreement.pdf (Class: Document)
                     1. Employee Manual.docx (Class: Document)
                     1. Focus Corp - Employment Application.pdf (Class: Employment Application)
