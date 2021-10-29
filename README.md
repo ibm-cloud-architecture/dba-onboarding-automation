@@ -28,11 +28,16 @@ We assume the following products are installed, up and running:
 
 1. Determine your credentials
     1. For Content Services, use your own credentials to login into IBM Content Navigator
-    1. Create a service credential/account.  
-        1. Functional ID alias: `OnboardingAutomation`
-        1. Description: `Used by process app Employee Onboarding - Onboard Employee`
-        1. Role: `Content Platform Engine Role - Class Designer`
-        1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
+    1. From `Access Management`, create the following:
+        1. `Service credientials`
+            1. Functional ID alias: `OnboardingAutomation`
+              1. Description: `Used by process app Employee Onboarding - Onboard Employee`
+              1. Role: `Content Platform Engine Role - Class Designer`
+              1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
+        1. `Groups`
+            1. Group: **TE_DEMO**
+            1. Group: **TE_OnboardingAutomation_Redaction**
+                1. Add the **TE_DEMO** group to this group           
 1. Deploy Content Services
     1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
         1. Navigate to **Data Design, Property Templates** and create property templates for:
@@ -62,7 +67,7 @@ We assume the following products are installed, up and running:
                         1. Last Name: Swift
                         1. Application Date: specify any date
         1. Optional - Unsecured folder content
-            1. Repeat the last two (Photos and Employee Packet) for folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
+            1. Repeat the last two steps (Photos and Employee Packet) for folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
         1. Optional - TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
             1. From Navigator, select the **Unsecured** folder and perform the following:
                   1. Update the security permission on the folder:
