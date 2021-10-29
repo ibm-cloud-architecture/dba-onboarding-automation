@@ -71,7 +71,6 @@ We assume the following products are installed, up and running:
         1. Optional - TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
             1. From Navigator, select the **Unsecured** folder and perform the following:
                 1. Update the security permission on the folder:
-                    1. Remove **Authenicated users** from permission **Reader**
                     1. Add **Authenicated users** with **Author** permission.  Note: this is selected as an **Alias Account**
                 1. Repeat the step above for any subfolders                            
     1. Navigator Administration
@@ -126,7 +125,11 @@ We assume the following products are installed, up and running:
                     1. **Content list checkboxes**: set option to **Show**
         1. Role Based Redaction                 
             1. From Navigator Administration, select **Role-based Redactions** and set up the following:
-                1. **Reasons** - create/validate that the following reasons exists:  Credit Card Number, Social Security Number, PII (Personally Identifiable Information)
+                1. **Reasons** - create/validate that the following reasons exists:  
+                    1. Credit Card Number (should already be created)
+                    2. Social Security Number (should already be created)
+                    3. Name: PII
+                       Description: Personally Identifiable Information
                 1. **Policies and Roles**
                     1. **Redaction Roles**
                         1. **Editor** - create an editor redaction role named **TE Redaction Editor** and include group **TE_OnboardingAutomation_Redaction**
