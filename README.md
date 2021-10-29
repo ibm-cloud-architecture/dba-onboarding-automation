@@ -145,6 +145,12 @@ We assume the following products are installed, up and running:
                             1. Description: **TE Redaction Viewer**
                             1. Membership: **Editors**
                                 1. Add existing editors: **TE_OnboardingAutomation_Redaction**
+                    1. **Redaction Policy** - click `New Redaction Policy`
+                        1. Name: **TE Redaction Policy**
+                        1. Description: **TE Redaction Policy**
+                        1. Redaction Reasons: **Credit Card Number, Social Security Number, PII**
+                        1. Redaction editors: **TE Redaction Editor**
+                        1. Redaction viewers: **TE Redaction Viewer**
     1. Navigator features
         1. Search
             1. Create a search with following properties:
