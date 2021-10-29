@@ -37,6 +37,7 @@ We assume the following products are installed, up and running:
               1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
         1. `Groups`
             1. Group: **TE_DEMO**
+                1. Add any additionals users that need access to content in this group
             1. Group: **TE_OnboardingAutomation_Redaction**
                 1. Add the **TE_DEMO** group to this group           
 1. Deploy Content Services
@@ -124,12 +125,7 @@ We assume the following products are installed, up and running:
                     1. **Document thumbnails**: set option to **Show**
                     1. **Status bar**: set option to **Show**
                     1. **Content list checkboxes**: set option to **Show**
-        1. Role Based Redaction
-            1. Create an **Access Management** group called **TE_DEMO**
-                1. Add any users that need access to content in this group
-                1. Create an **Access Management** group called **TE_OnboardingAutomation_Redaction**
-                    1. Add any users that need to create and view annotations into this group
-                    1. Add the **TE_DEMO** group to this group                    
+        1. Role Based Redaction                 
             1. From Navigator Administration, select **Role-based Redactions** and set up the following:
                 1. **Reasons** - create/validate that the following reasons exists:  Credit Card Number, Social Security Number, PII (Personally Identifiable Information)
                 1. **Policies and Roles**
