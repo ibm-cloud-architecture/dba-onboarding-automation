@@ -136,7 +136,7 @@ We assume the following products are installed, up and running:
                        Description: Personally Identifiable Information
                 1. **Policies and Roles**
                     1. Click `Policies and Roles`
-                    1. Connect to your repository: `Corporate Operations`
+                    1. If not connected, connect to your repository: `Corporate Operations`
                     1. **Redaction Roles** - click `New Redaction Role`
                         1. `TE Redaction Editor`
                             1. Name: **TE Redaction Editor**
