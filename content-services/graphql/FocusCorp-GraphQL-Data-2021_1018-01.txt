@@ -38,13 +38,13 @@ Execute each CURL command separately below, ensure that the files accessible fro
 # Folder - Selena Swift
 # Employee Manual.docx
 #==============================================================
-curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet\" documentProperties: {name: \"Employee Manual\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/msword\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Employee Manual.docx"
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet\" documentProperties: {name: \"Employee Manual\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Employee Manual.docx"
 
 #==============================================================
 # Folder - Unsecured
 # Employee Manual.docx
 #==============================================================
-curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet\" documentProperties: {name: \"Employee Manual\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/msword\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Employee Manual.docx"
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet\" documentProperties: {name: \"Employee Manual\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Employee Manual.docx"
 
 #==============================================================
 # Folder - Selena Swift
