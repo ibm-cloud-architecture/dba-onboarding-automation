@@ -210,6 +210,7 @@ We assume the following products are installed, up and running:
         1. If deploying on your own OpenShift environment: import the application ZIP file
     1. Edit Details from the application's menu and add appropriate teams to the Permissions table, such as `#AUTHENTICATED-USERS` to make the app available to everyone
     1. Edit the desktop of your choice (generally `appDesktop1`) and on the Layout tab, select the application
+    1. To verify, confirm that the `Onboarding Automation` application is displayed in `Business Automation Apps`
 
 ## Contributors
   * Lead content developer [Thomas Yang](https://www.linkedin.com/in/thomasyang44/)
