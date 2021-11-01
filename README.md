@@ -46,15 +46,23 @@ We assume the following products are installed, up and running:
         * Install the `oc` CLI from the **Client-side requirements** here: [V21.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-demo-deployment).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
 1. Deploy Content Services
     1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
-        1. Navigate to **Data Design, Property Templates** and create property templates for:
+        1. `Property Templates` - navigate to **Data Design, Property Templates** and create property templates for:
             1. First Name (String)
             1. Last Name (String)
             1. Application Date (Date Time)
             1. Employee ID (String)
             1. Onboarded (Boolean)
             1. Hire Date (Date Time)
-        1. Navigate to **Data Design, Classes, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
-        1. Navigate to **Data Design, Classes, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
+        1. `Document sub-class: Employment Application` - navigate to **Data Design, Classes, Document** and create a Document sub-class named **Employment Application** with these properties:
+            1. First Name
+            1. Last Name
+            1. Application Date
+        1. `Folder sub-class: Employee` - navigate to **Data Design, Classes, Folder** and create a Folder sub-class called **Employee** with the following following properties:
+            1. First Name
+            1. Last Name
+            1. Employee ID
+            1. Onboarded
+            1. Hire Date
     1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/)
         1. Download and review the GitHub script: `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
         1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
