@@ -55,7 +55,7 @@ We assume the following products are installed, up and running:
             1. Hire Date (Date Time)
         1. Navigate to **Data Design, Classes, Document** and create a Document sub-class called **Employment Application** with the first three properties created in the step above (First Name, Last Name, Application Date)
         1. Navigate to **Data Design, Classes, Folder** and create a Folder sub-class called **Employee** with the following following properties: First Name, Last Name, Employee ID, Onboarded, Hire Date
-    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/dev/content-services-graphql/)
+    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/)
         1. Download and review the GitHub script: `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
         1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
@@ -128,13 +128,14 @@ We assume the following products are installed, up and running:
                     1. **Status bar**: set option to **Show**
                     1. **Content list checkboxes**: set option to **Show**
         1. Role Based Redaction                 
-            1. From Navigator Administration, select **Role-based Redactions** and set up the following:
+            1. From Navigator Administration, click **Role-based Redactions** and set up the following:
                 1. **Reasons** - create/validate that the following reasons exists:  
                     1. Credit Card Number (should already be created)
                     2. Social Security Number (should already be created)
                     3. Name: PII  
                        Description: Personally Identifiable Information
                 1. **Policies and Roles**
+                    1. Click `Policies and Roles`
                     1. Connect to your repository: `Corporate Operations`
                     1. **Redaction Roles** - click `New Redaction Role`
                         1. `TE Redaction Editor`
@@ -148,7 +149,7 @@ We assume the following products are installed, up and running:
                             1. Type: **Viewer**
                             1. Description: **TE Redaction Viewer**
                             1. Membership: **Editors**
-                                1. Add existing editors: **TE_OnboardingAutomation_Redaction**
+                                1. Add existing editor: **TE_OnboardingAutomation_Redaction**
                     1. **Redaction Policy** - click `New Redaction Policy`
                         1. Name: **TE Redaction Policy**
                         1. Description: **TE Redaction Policy**
@@ -157,7 +158,7 @@ We assume the following products are installed, up and running:
                         1. Redaction viewers: **TE Redaction Viewer**
     1. Navigator features
         1. Search
-            1. Create a search with following properties:
+            1. Create any type search (ie. Class=Employment Application) with following properties:
                 1. **Name** - Employment Application Search
                 1. **Description** - Employment Application Search
                 1. **Save in** - Corporate Operations / Focus Corp / X Configuration
@@ -167,13 +168,13 @@ We assume the following products are installed, up and running:
             1.  Create **Employee Onboarding** teamspace template as documented in the Getting Started Lab, section [4.1.1 Teamspace Template Builder](https://ibm-cloud-architecture.github.io/refarch-dba/use-cases/onboarding-automation/#lab-section-411).
                 1. Template name: **Employee Onboarding**
                 1. Template description: **Teamspace Template for Employee Onboarding**
-                1. Share template with**: **Everyone in my company**
+                1. Share template with**: **Everyone**
 1. Deploy BAW artifacts
     1. Login to **Workflow Center** and navigate to **Process Apps**
     1. Import Employee_Onboarding - OnboardingAutomation-YYYY.MM.DD_##.twx
     1. Open the Onboarding Automation process app and navigate to Process App Settings -> Servers
         1. Edit the settings for hostname, port, context path, repository, user id, password and so forth for your **Enterprise Content Management Server**
-            1.  Example values: demo-emea-03.automationcloud.ibm.com, 443, /dba/dev/openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
+            1.  Example values: <tenant-id>.automationcloud.ibm.com, 443, /dba/dev/openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
         1. Use the **Test connection** button to validate connectivity
     1. Confirm settings for process: **Onboard Employee** - **Start**  
         1. General - Event Properties: Type should be set to **Employment Application**
@@ -187,7 +188,7 @@ We assume the following products are installed, up and running:
         1. To confirm the process app is installed correctly, create a document with class Employment Application and then right-click on the document to select the **Workflow, Launch Process** menu option.  
             1. From the **Launch Process** dialog, select **Onboard Employee** and confirm the Launch UI dialog is displayed.  
     1. From **Workflow Center** and create a new snapshot of the process application. Name the snapshot something very shot such as `V2`.  Naming it V2 will allow the launching of the process to be displayed as:
-        1. Name: Onboard Employee (V2)
+        1. Name: V2
         1. Description: Automation Onboarding
     1. Install the new snapshot to your **Run ProcessServer**
     1. From the Production environment, access **Process Admin Console** and go to **Installed Apps, Servers**.  
