@@ -3,7 +3,7 @@
 # Automation Onboarding - create the Focus Corp folder structure
 #
 # Run each section separately and confirm result using GraphiQL UI
-#       https://<tenanant>.automationcloud.ibm.com/dba/run/content-services-graphql/
+#       https://<tenant>.automationcloud.ibm.com/dba/run/content-services-graphql/
 #
 #===========================================================================================
 
