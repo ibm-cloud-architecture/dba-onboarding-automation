@@ -176,7 +176,7 @@ We assume the following products are installed, up and running:
             1.  Create **Employee Onboarding** teamspace template as documented in the Getting Started Lab, section [4.1.1 Teamspace Template Builder](https://ibm-cloud-architecture.github.io/refarch-dba/use-cases/onboarding-automation/#lab-section-411).
                 1. Template name: **Employee Onboarding**
                 1. Template description: **Teamspace Template for Employee Onboarding**
-                1. Share template with**: **Everyone**
+                1. Share template with**: **Everyone in my company**
 1. Deploy BAW artifacts
     1. Login to **Workflow Center** and navigate to **Process Apps**
     1. Import Employee_Onboarding - OnboardingAutomation-YYYY.MM.DD_##.twx
