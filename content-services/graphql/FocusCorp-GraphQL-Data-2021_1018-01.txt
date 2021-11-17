@@ -60,6 +60,19 @@ curl -u <service account login>:<service_account_password> <https://tenant.autom
 
 #==============================================================
 # Folder - Selena Swift
+# Focus Corp - Employment Application.pdf
+#==============================================================
+
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet\" classIdentifier: \"EmploymentApplication\" documentProperties: {name: \"Focus Corp - Employment Application\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/pdf\" subContentTransfer: {content:$contvar} }]} properties: [{FirstName: \"Selena\"}, {LastName: \"Swift\"}, {ApplicationDate: \"2012-04-11T00:37:01.569Z\"}] } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Focus Corp - Employment Application.pdf"
+
+#==============================================================
+# Folder - Unsecured
+# Focus Corp - Employment Application.pdf
+#==============================================================
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet\" classIdentifier: \"EmploymentApplication\" documentProperties: {name: \"Focus Corp - Employment Application\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/pdf\" subContentTransfer: {content:$contvar} }]} properties: [{FirstName: \"Selena\"}, {LastName: \"Swift\"}, {ApplicationDate: \"2012-04-11T00:37:01.569Z\"}] } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Focus Corp - Employment Application.pdf"
+
+#==============================================================
+# Folder - Selena Swift
 # Photos
 # Other option is to select all the photos and drop into folder
 #==============================================================
