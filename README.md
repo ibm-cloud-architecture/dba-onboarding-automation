@@ -35,11 +35,14 @@ We assume the following products are installed, up and running:
                   1. Description: `Used by process app Employee Onboarding - Onboard Employee`
                   1. Role: `Content Platform Engine Role - Class Designer`
                   1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
+            1. `Users`
+                1. Add demo users with access to `Production` environment
+                    1. Within the `Production` environment, the user does NOT need any specific roles
             1. `Groups`
                 1. Group: **TE_DEMO**
                     1. Add any additionals users that need access to content in this group
                 1. Group: **TE_OnboardingAutomation_Redaction**
-                    1. Add the **TE_DEMO** group to this group           
+                    1. Add the **TE_DEMO** group to this group
     1. If deploying on your own OpenShift environment:
         * Make sure you have a login to all required components above
     1. If deploying on your own OpenShift environment based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS):
