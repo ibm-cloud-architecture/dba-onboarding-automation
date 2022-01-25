@@ -40,7 +40,7 @@ We assume the following products are installed, up and running:
                     1. Within the `Production` environment, the user does NOT need any specific roles
             1. `Groups`
                 1. Group: **TE_DEMO**
-                    1. Add any additional users that need access to content and/or redaction policies in this group
+                    1. Add any additional users that need access to content and/or redaction policies to this group
                 1. Group: **TE_OnboardingAutomation_Redaction**
                     1. Add the **TE_DEMO** group to this group
     1. If deploying on your own OpenShift environment:
