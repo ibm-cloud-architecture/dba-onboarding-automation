@@ -40,7 +40,7 @@ We assume the following products are installed, up and running:
                     1. Within the `Production` environment, the user does NOT need any specific roles
             1. `Groups`
                 1. Group: **TE_DEMO**
-                    1. Add any additionals users that need access to content in this group
+                    1. Add any additional users that need access to content and/or redaction policies in this group
                 1. Group: **TE_OnboardingAutomation_Redaction**
                     1. Add the **TE_DEMO** group to this group
     1. If deploying on your own OpenShift environment:
@@ -114,8 +114,8 @@ We assume the following products are installed, up and running:
             1. Copy the **Default teamspace content list context menu** menu option and add options for **Launch Process** and **Share**
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Teamspace content list context menu** to the new menu
         1. Viewer Maps - ensure that the first two viewers are set for:
-            1. Repository Type=FileNet Conent Mananger, Viewer=Video Viewer, File Type=video/mp4, video/x-m4v, video/webm, video/quicktime, audio/mpeg, audio/mp4, audio/x-m4a, audio/x-m4b (select all the video/audio formats)
-            1. Repository Type=FileNet Conent Mananger, Viewer=Daeja VidewONE Virtual, File Type=All file types
+            1. Repository Type=FileNet Content Manager, Viewer=Video Viewer, File Type=video/mp4, video/x-m4v, video/webm, video/quicktime, audio/mpeg, audio/mp4, audio/x-m4a, audio/x-m4b (select all the video/audio formats)
+            1. Repository Type=FileNet Content Manager, Viewer=Daeja ViewONE Virtual, File Type=All file types
             1. Update your desktop and update **Viewer map** setting to use this viewer map
         1. Desktops - edit your default desktop with the following settings:
             1. **General** tab
