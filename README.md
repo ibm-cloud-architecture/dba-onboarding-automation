@@ -66,8 +66,10 @@ We assume the following products are installed, up and running:
             1. Employee ID
             1. Onboarded
             1. Hire Date
-    1. Focus Corp folder structure - using GraphiQL (Cloud Pak for Business Automation as a Service example: https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/)
-        1. Download and review the GitHub script: `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
+    1. Focus Corp folder structure - create folder structure using GraphiQL
+        1. Locate your GraphQL URL, using Cloud Pak for Business Automation as a Service **example**, the format is:
+            1. https://\<tenant\>.automationcloud.ibm.com/dba/run/content-services-graphql/
+        1. Download and review the GitHub script (located within this GitHub): `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
         1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
         1. Copy and paste each section and confirm the script executes successfully on your environment
     1. Sample Content - using the Navigator Browse feature, navigate to folder `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` and perform the following:
