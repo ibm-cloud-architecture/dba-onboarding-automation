@@ -40,7 +40,11 @@ We assume the following products are installed, up and running:
                     1. Within the `Production` environment, the user does NOT need any specific roles
             1. `Groups`
                 1. Group: **TE_DEMO**
-                    1. Add any additional users that need access to content and/or redaction policies to this group
+                    1. Add any new users to this group.  
+                        1. This access management group identifies users that can:
+                            1. Access content (folders/documents)
+                            1. Perform redactions on documents
+                            1. Launch the Onboard Employee process app
                 1. Group: **TE_OnboardingAutomation_Redaction**
                     1. Add the **TE_DEMO** group to this group
     1. If deploying on your own OpenShift environment:
