@@ -204,9 +204,13 @@ We assume the following products are installed, up and running:
         1. Name: V2
         1. Description: Automation Onboarding
     1. Install the new snapshot to your **Run ProcessServer**
-    1. From the Production environment, access **Process Admin Console** and go to **Installed Apps, Servers**.  
-        1. Select **CONTENT_SERVICES_SERVER** and then update the **Context Path** to the Run environment (ie. /dba/run/openfncmis_wlp/services11)
-        1. Use the **Test Connection** button to test the connection.
+    1. From the Production environment, access **Process Admin Console** and go to **Installed Apps**
+        1. Select the **Employee Onboarding** process app
+        1. Select **Team Bindings**
+            1. Select the group **TE_DEMO** as a member for all the teams (All Users, Managers, Managers of All Users, Process Owner)
+        1. Select **Servers**
+            1. Select **CONTENT_SERVICES_SERVER** and then update the **Context Path** to the Run environment (ie. /dba/run/openfncmis_wlp/services11)
+            1. Use the **Test Connection** button to test the connection.
             1. Click the **Apply** button to save the configuration
 1. Deploy Business Automation Studio artifacts
     1. From the Development environment, select **Build, Studio**
