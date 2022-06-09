@@ -25,7 +25,7 @@ We assume the following products are installed, up and running:
         Note: only necessary for the last lab step to launch a process from a document
 
 Note:
-1. Please note that this has not been fully tested on non-SaaS environments - there may be slight differences in the setup.  For example, specify object CONTENT instead of OS1.  
+1. This setup has not been fully tested on non-SaaS environments - there may be slight differences in the setup.  For example, specify object CONTENT instead of OS1.  
 1. It is recommend to clone this GitHub repository rather than individually copying each asset that is required to import into your environment.  
 
 ### Deploy the artifacts
