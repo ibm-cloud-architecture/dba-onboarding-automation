@@ -24,6 +24,10 @@ We assume the following products are installed, up and running:
     * Business Automation Workflow (BAW) on VMs or OpenShift
         Note: only necessary for the last lab step to launch a process from a document
 
+Note:
+1. Please note that this has not been fully tested on non-SaaS environments - there may be slight differences in the setup.  For example, specify object CONTENT instead of OS1.  
+1. It is recommend to clone this GitHub repository rather than individually copying each asset that is required to import into your environment.  
+
 ### Deploy the artifacts
 
 1. Determine your credentials
@@ -49,7 +53,6 @@ We assume the following products are installed, up and running:
                     1. Add the **TE_DEMO** group to this group
     1. If deploying on your own OpenShift environment:
         * Make sure you have a login to all required components above
-        * Please note that this has not been fully tested on ROKS environment, there may be slight differences in the setup.  For example, specify object CONTENT instead of OS1.  
     1. If deploying on your own OpenShift environment based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS):
         * Install the `oc` CLI from the **Client-side requirements** here: [V21.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-demo-deployment).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
 1. Deploy Content Services
