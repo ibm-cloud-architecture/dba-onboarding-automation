@@ -49,10 +49,11 @@ We assume the following products are installed, up and running:
                     1. Add the **TE_DEMO** group to this group
     1. If deploying on your own OpenShift environment:
         * Make sure you have a login to all required components above
+        * Please note that this has not been fully tested on ROKS environment, there may be slight differences in the setup.  For example, specify object CONTENT instead of OS1.  
     1. If deploying on your own OpenShift environment based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS):
         * Install the `oc` CLI from the **Client-side requirements** here: [V21.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-demo-deployment).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
 1. Deploy Content Services
-    1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1`) and perform the following:
+    1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1` on SaaS and `CONTENT` on ROKS) and perform the following:
         1. `Property Templates` - navigate to **Data Design, Property Templates** and create property templates for:
             1. First Name (String)
             1. Last Name (String)
