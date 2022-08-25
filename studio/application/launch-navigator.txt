@@ -1,0 +1,28 @@
+var fullHostname = window.location.hostname;
+
+// Check SaaS or non-SaaS (assume ROKS)
+var index1 = fullHostname.search("automationcloud.ibm.com");
+var index2 = fullHostname.search("blueworkscloud.com");
+// Check PBK or BAN environment
+var index3 = fullHostname.search("pbk");
+
+if ((index1 != -1) || (index2 != -1)) { //SaaS
+	if (index3 != -1) {
+		var tenantHostname = fullHostname.substring(11);
+	}
+	else {
+		var tenantHostname = fullHostname.substring(17);
+	}
+	var saasURL = new URL('https://demo-emea-02.automationcloud.ibm.com/dba/run/navigator/');
+	saasURL.hostname = tenantHostname;
+	window.open(saasURL);
+}
+else { // non-SaaS (assume ROKS)
+	if (index3 != -1) {
+		var tenantHostname = fullHostname.substring(7);
+	}
+	else {
+		var tenantHostname = fullHostname.substring(3);
+	}
+	window.open("https://navigator-"+tenantHostname+"/navigator/");
+}

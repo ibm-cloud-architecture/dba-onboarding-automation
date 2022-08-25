@@ -1,0 +1,167 @@
+CURL commands to upload to document to Focus Corp
+
+#================
+Step 1
+#================
+Download the following content from GitHub to a local folder accessible to your CURL environment:
+
+Documents:
+  https://github.com/ibm-cloud-architecture/dba-onboarding-automation/tree/main/content-services/sample-content/Selena%20Swift/Employee%20Packet
+    Confidentiality Agreement.pdf
+    Employee Manual.docx
+    Focus Corp - Employment Application.pdf
+
+Photos
+  https://github.com/ibm-cloud-architecture/dba-onboarding-automation/tree/main/content-services/sample-content/Selena%20Swift/Photos
+
+#================
+Step 2
+#================
+Do a search and replace with the tenant URL below - replace with your tenant identifier:
+
+<https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql>
+
+#================
+Step 3
+#================
+Do a search and replace for the service account login and password below - replace with your service account info
+
+<service account login>:<service_account_password>
+
+#================
+Step 4
+#================
+Execute each CURL command separately below, ensure that the files accessible from your CURL environment
+
+
+#==============================================================
+# Folder - Selena Swift
+# Employee Manual.docx
+#==============================================================
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet\" documentProperties: {name: \"Employee Manual\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Employee Manual.docx"
+
+#==============================================================
+# Folder - Unsecured
+# Employee Manual.docx
+#==============================================================
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet\" documentProperties: {name: \"Employee Manual\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/vnd.openxmlformats-officedocument.wordprocessingml.document\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Employee Manual.docx"
+
+#==============================================================
+# Folder - Selena Swift
+# Confidentiality Agreement.pdf
+#==============================================================
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet\" documentProperties: {name: \"Confidentiality Agreement\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/pdf\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Confidentiality Agreement.pdf"
+
+#==============================================================
+# Folder - Unsecured
+# Confidentiality Agreement.pdf
+#==============================================================
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet\" documentProperties: {name: \"Confidentiality Agreement\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/pdf\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Confidentiality Agreement.pdf"
+
+#==============================================================
+# Folder - Selena Swift
+# Focus Corp - Employment Application.pdf
+#==============================================================
+
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet\" classIdentifier: \"EmploymentApplication\" documentProperties: {name: \"Focus Corp - Employment Application\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/pdf\" subContentTransfer: {content:$contvar} }]} properties: [{FirstName: \"Selena\"}, {LastName: \"Swift\"}, {ApplicationDate: \"2012-04-11T00:37:01.569Z\"}] } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Focus Corp - Employment Application.pdf"
+
+#==============================================================
+# Folder - Unsecured
+# Focus Corp - Employment Application.pdf
+#==============================================================
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet\" classIdentifier: \"EmploymentApplication\" documentProperties: {name: \"Focus Corp - Employment Application\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"application/pdf\" subContentTransfer: {content:$contvar} }]} properties: [{FirstName: \"Selena\"}, {LastName: \"Swift\"}, {ApplicationDate: \"2012-04-11T00:37:01.569Z\"}] } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Focus Corp - Employment Application.pdf"
+
+#==============================================================
+# Folder - Selena Swift
+# Photos
+# Other option is to select all the photos and drop into folder
+#==============================================================
+
+# Boats In Iqaluit.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Boats In Iqaluit.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Boats In Iqaluit.jpg"
+
+# Business Woman with Graphs.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Business Woman with Graphs.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Business Woman with Graphs.jpg"
+
+# Coffee.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Coffee.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Coffee.jpg"
+
+# Construction.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Construction.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Construction.jpg"
+
+# Container Ship.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Container Ship.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Container Ship.jpg"
+
+# Exponential Technologies Space.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Exponential Technologies Space.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Exponential Technologies Space.jpg"
+
+# Fuji Pagoda.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Fuji Pagoda.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Fuji Pagoda.jpg"
+
+# Gem of Bay.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Gem of Bay.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Gem of Bay.jpg"
+
+# Glacier Climb.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Glacier Climb.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Glacier Climb.jpg"
+
+# Satellite Hurricane.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Satellite Hurricane.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Satellite Hurricane.jpg"
+
+# Tropical Leaves.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Tropical Leaves.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Tropical Leaves.jpg"
+
+# Twisty Road.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Twisty Road.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Twisty Road.jpg"
+
+# Winding Costal.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Winding Costal.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Winding Costal.jpg"
+
+# Woodworking.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos\" documentProperties: {name: \"Woodworking.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Woodworking.jpg"
+
+#==============================================================
+# Folder - Unsecured
+# Photos
+# Other option is to select all the photos and drop into folder
+#==============================================================
+
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Boats In Iqaluit.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Boats In Iqaluit.jpg"
+
+# Business Woman with Graphs.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Business Woman with Graphs.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Business Woman with Graphs.jpg"
+
+# Coffee.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Coffee.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Coffee.jpg"
+
+# Construction.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Construction.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Construction.jpg"
+
+# Container Ship.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Container Ship.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Container Ship.jpg"
+
+# Exponential Technologies Space.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Exponential Technologies Space.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Exponential Technologies Space.jpg"
+
+# Fuji Pagoda.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Fuji Pagoda.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Fuji Pagoda.jpg"
+
+# Gem of Bay.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Gem of Bay.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Gem of Bay.jpg"
+
+# Glacier Climb.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Glacier Climb.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Glacier Climb.jpg"
+
+# Satellite Hurricane.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Satellite Hurricane.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Satellite Hurricane.jpg"
+
+# Tropical Leaves.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Tropical Leaves.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Tropical Leaves.jpg"
+
+# Twisty Road.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Twisty Road.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Twisty Road.jpg"
+
+# Winding Costal.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Winding Costal.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Winding Costal.jpg"
+
+# Woodworking.jpg
+curl -u <service account login>:<service_account_password> <https://tenant.automationcloud.ibm.com/dba/run/content-services-graphql/graphql> -F graphql='{"query":"mutation ($contvar:String) {createDocument(repositoryIdentifier:\"OS1\" fileInFolderIdentifier: \"/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos\" documentProperties: {name: \"Woodworking.jpg\" contentElements:{replace: [{type: CONTENT_TRANSFER contentType: \"image/jpeg\" subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }", "variables":{"contvar":null} }' -F contvar=@"Woodworking.jpg"
