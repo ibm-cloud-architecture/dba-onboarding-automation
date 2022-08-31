@@ -16,7 +16,7 @@
 
 We assume the following products are installed, up and running:
 
-* IBM Cloud Pak® for Business Automation version 21.0.2
+* IBM Cloud Pak® for Business Automation version 22.x
     * Automation Foundation on OpenShift
     * Business Automation Applications (including Studio and App Engine) on OpenShift
     * Business Automation Content Services on VMs or OpenShift
@@ -43,8 +43,11 @@ Note:
                 1. Add demo users with access to `Production` environment
                     1. Within the `Production` environment, the user does NOT need any specific roles
             1. `Groups`
+                1. Group: **TE_ADMIN**
+                    1. Add only administrative users to this group.  
+                        1. This access management group identifies users that have access to modify all folders and documents.
                 1. Group: **TE_DEMO**
-                    1. Add any new users to this group.  
+                    1. Add demo users to this group.  
                         1. This access management group identifies users that can:
                             1. Access content (folders/documents)
                             1. Perform redactions on documents
@@ -191,11 +194,14 @@ Note:
                 1. Template description: **Teamspace Template for Employee Onboarding**
                 1. Share template with**: **Everyone in my company**
 1. Deploy BAW artifacts
-    1. Login to **Workflow Center** and navigate to **Process Apps**
+    1. From the Development environment, select **Build, Studio** (Business Automation Studio) and navigate to **Business automations**
     1. Import Employee_Onboarding - OnboardingAutomation-YYYY.MM.DD_##.twx
     1. Open the Onboarding Automation process app and navigate to Process App Settings -> Servers
         1. Edit the settings for hostname, port, context path, repository, user id, password and so forth for your **Enterprise Content Management Server**
-            1.  Example values: \<tenant\>.automationcloud.ibm.com, 443, /dba/dev/openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
+            1. Example values:
+                \<tenant\>.automationcloud.ibm.com, 443, /dba/dev/openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
+            1. Example values:
+                fncm-dev-\<tenant\>.blueworkscloud.com, 443, /openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
         1. Use the **Test connection** button to validate connectivity
     1. Confirm settings for process: **Onboard Employee** - **Start**  
         1. General - Event Properties: Type should be set to **Employment Application**
@@ -208,7 +214,7 @@ Note:
     1. Save changes and optionally confirm the process app is installed correctly.  
         1. To confirm the process app is installed correctly, create a document with class Employment Application and then right-click on the document to select the **Workflow, Launch Process** menu option.  
             1. From the **Launch Process** dialog, select **Onboard Employee** and confirm the Launch UI dialog is displayed.  
-    1. From **Workflow Center** and create a new snapshot of the process application. Name the snapshot something very shot such as `V2`.  Naming it V2 will allow the launching of the process to be displayed as:
+    1. From **Studio** (Business Automation Studio), create a new snapshot of the workflow application. Name the snapshot something very shot such as `V2`.  Naming it V2 will allow the launching of the process to be displayed as:
         1. Name: V2
         1. Description: Automation Onboarding
     1. Install the new snapshot to your **Run ProcessServer**
