@@ -104,7 +104,7 @@ Note:
     1. Navigator Administration
         1. Connections, Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store, set the following:
-                1. **General** tab - Display Name: **Corporate Operations**
+                1. **General** tab - Display name: **Corporate Operations**
                 1. **Configuration Parameters** tab:
                     1. **Workflow connection point** - OS1_CP1:1
                     1. **State icons** - enabled for all except **Are uploading** (requires Aspera plugin)
