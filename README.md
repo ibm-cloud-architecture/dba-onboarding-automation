@@ -103,7 +103,7 @@ Note:
                 1. Repeat the step above for any subfolders                            
     1. Navigator Administration
         1. Connections, Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
-            1. For the FileNet content object store:
+            1. For the FileNet content object store, set the following:
                 1. **General** tab - Display Name: **Corporate Operations**
                 1. **Configuration Parameters** tab:
                     1. **Workflow connection point** - OS1_CP1:1
