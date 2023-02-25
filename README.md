@@ -35,7 +35,7 @@ Note:
         1. You will use a single login to access CPE, BAS and BAW
         1. Additionally, create the following from `Access Management`
             1. `Service credientials`
-                1. Functional ID alias: `OnboardingAutomation`
+                1. Functional ID alias: `OA` (use something short)
                   1. Description: `Used by process app Employee Onboarding - Onboard Employee`
                   1. Role: `Content Platform Engine Role - Class Designer`
                   1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
@@ -46,8 +46,9 @@ Note:
                 1. Group: **TE_ADMIN**
                     1. Add only administrative users to this group.  
                         1. This access management group identifies users that have access to modify all folders and documents.
+                        2. Place the 'OA' service credential into this group
                 1. Group: **TE_DEMO**
-                    1. Add demo users to this group.  
+                    1. Add demo users to this group -OR- add the group `ECMoC_Client_CPE_User`
                         1. This access management group identifies users that can:
                             1. Access content (folders/documents)
                             1. Perform redactions on documents
