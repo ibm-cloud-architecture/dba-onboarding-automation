@@ -83,7 +83,7 @@ Note:
     1. `Folder`: `Focus Corp` (Create manually or use the first step from `Focus Corp folder structure` step below )
         1. Administrators - Full Control - This object and all children
         1. TE_ADMIN - Full Control - This object and all children
-        1. TE_DEMO - View properties <Default> - This object only
+        1. TE_DEMO - View properties <Default> - This object and all children
     1. `Default Instance security`
         1. `Folder`
             1. Administrators - Full Control - This object and all children
