@@ -78,7 +78,8 @@ Note:
     1. `Root folder`
         1. Administrators - Full Control - This object and all children
         1. ECMoC_Service_Account - Full Control - This object only
-        1. Administrators - View properties <Default> - This object only
+        1. TE_ADMIN - Full Control - This object only
+        1. ECMoC_Client_CPE_User - View properties <Default> - This object only
     1. `Folder`: `Focus Corp` (Create manually or use the first step from `Focus Corp folder structure` step below )
         1. Administrators - Full Control - This object and all children
         1. TE_ADMIN - Full Control - This object and all children
