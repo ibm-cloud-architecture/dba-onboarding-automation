@@ -58,24 +58,37 @@ Note:
             1. Review the [NextGen User Guide](https://ibm.biz/NextGenUserGuide) for the latest user security required for the Run environment, as of February 2023, it is:
                 1. Insights Role: Administrators
                 1. Workplace Administrators
-                1. Decision ServerL Operator
-                1. Note: access to the Production environment provide membership into the following access management groups:
+                1. Decision Server: Operator
+                1. Note: access to the Production environment provides membership into the following access management groups:
                     1. Participants
-                        1. ECMoC_Client_CPE_User 
+                    1. ECMoC_Client_CPE_User (from Particpants)
     1. If deploying on your own OpenShift environment:
         * Make sure you have a login to all required components above
     1. If deploying on your own OpenShift environment based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS):
         * Install the `oc` CLI from the **Client-side requirements** here: [V21.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-demo-deployment).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
 1. FileNet Security (Configure in ACCE)
-    1. Object Store
-        1. A
+    1. Object Store (default from standard)
+        1. ECMoC_Service_Account - Full Control - This object only
+        1. ECMoC_Client_CPE_Administrator - Full Control - This object only  
+        1. ECMoC_Client_ACCE_ClassDesigner - Full Control - This object only
+        1. ECMoC_Client_ACCE_ApplicationDesigner - Full Control - This object only
+        1. baw_dev_administrators - Full Control - This object only
+        1. CPE_Bootstrap_User - Full Control - This object only
+        1. ECMoC_Client_CPE_User - Use object store - This object only
     1. Root folder
-        1. A
-    1. Folder: Focus Corp
-        1. A
+        1. Administrators - Full Control - This object and all children
+        1. ECMoC_Service_Account - Full Control - This object only
+        1. Administrators - View properties <Default> - This object only
+    1. Folder: Focus Corp (Create manually or use the first step from `Focus Corp folder structure` step below )
+        1. Administrators - Full Control - This object and all children
+        1. TE_ADMIN - Full Control - This object and all children
+        1. TE_DEMO - View properties <Default> - This object only
     1. Default Instance security
         1. Folder
+            1. Administrators - Full Control - This object and all children
+            1. #CREATOR-OWNER - Full Control - This object only 
         1. Document
+            1. Use default
 1. Deploy Content Services
     1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1` on SaaS and `CONTENT` on ROKS) and perform the following:
         1. `Property Templates` - navigate to **Data Design, Property Templates** and create property templates for:
