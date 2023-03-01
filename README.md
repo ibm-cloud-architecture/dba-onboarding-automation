@@ -128,7 +128,7 @@ Note:
                         1. First Name: Selena
                         1. Last Name: Swift
                         1. Application Date: specify any date
-        1. Optional - TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
+        1. TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
             1. Update the security on the **Unsecured** folder
                 1. TE_DEMO - Modify properties - This object and all children
     1. Navigator Administration
