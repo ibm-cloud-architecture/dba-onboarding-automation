@@ -129,8 +129,8 @@ Note:
                         1. Last Name: Swift
                         1. Application Date: specify any date
         1. Optional - TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
-            1. From Navigator, select the **Unsecured** folder and update the security for:
-                1. **TE_DEMO** TE_DEMO - Modify properties - This object and all children
+            1. Update the security on the **Unsecured** folder
+                1. TE_DEMO - Modify properties - This object and all children
     1. Navigator Administration
         1. Connections, Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store, set the following:
