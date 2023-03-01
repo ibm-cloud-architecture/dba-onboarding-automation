@@ -37,8 +37,8 @@ Note:
             1. `Service credientials`
                 1. Functional ID alias: `OA` (use something short)
                   1. Description: `Used by process app Employee Onboarding - Onboard Employee`
-                  1. Role: `Content Platform Engine Role - Class Designer`
                   1. Note: This service account is used by BAW to launch a process from a document.  Additionally, this account is also used to upload sample content using the GraphQL script.
+                  1. Permissions for this user added below
             1. `Users`
                 1. Add demo users with access to `Production` environment
                     1. Within the `Production` environment, the user does NOT need any specific roles
@@ -129,10 +129,8 @@ Note:
                         1. Last Name: Swift
                         1. Application Date: specify any date
         1. Optional - TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
-            1. From Navigator, select the **Unsecured** folder and perform the following:
-                1. Update the security permission on the folder:
-                    1. Add **Authenicated users** with **Author** permission.  Note: this is selected as an **Alias Account**
-                1. Repeat the step above for any subfolders                            
+            1. From Navigator, select the **Unsecured** folder and update the security for:
+                1. **TE_DEMO** TE_DEMO - Modify properties - This object and all children
     1. Navigator Administration
         1. Connections, Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store, set the following:
