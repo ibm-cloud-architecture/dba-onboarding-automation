@@ -1,0 +1,66 @@
+{
+"desStatements": [
+    {"query": "mutation {cf0: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Focus Corp', parent: {identifier: '/'}}) {id}}"},
+    {"query": "mutation updateFolder {updateFolder(repositoryIdentifier: 'OS1' identifier: '/Focus Corp' folderProperties: { permissions: {replace: [{ type:ACCESS_PERMISSION inheritableDepth:OBJECT_ALL_CHILDREN accessMask:999415 subAccessPermission:{ accessType:ALLOW granteeName:'cn=TE_ADMIN,cn=groups,O=IBM,C=US' }},{ type:ACCESS_PERMISSION inheritableDepth:OBJECT_ALL_CHILDREN accessMask:131073 subAccessPermission:{ accessType:ALLOW granteeName:'cn=TE_DEMO,cn=groups,O=IBM,C=US' }}]}}){ id }}"},
+
+    {"query": "mutation {cf1: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Contracts', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf2: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Customer', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf3: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Enablement', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf4: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Human Resources', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf5: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Invoices', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf6: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Legal Review', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf7: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Loan Origination', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf8: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Mail Room', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf9: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Operations', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf10: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Technology Enablement', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf11: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Travel', parent: {identifier: '/Focus Corp'}}) {id}}"},
+    {"query": "mutation {cf12: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'X Configuration', parent: {identifier: '/Focus Corp'}}) {id}}"},
+
+    {"query": "mutation {cf1: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Service Contracts', parent: {identifier: '/Focus Corp/Contracts'}}) {id}}"},
+    {"query": "mutation {cf2: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Applications', parent: {identifier: '/Focus Corp/Customer'}}) {id}}"},
+    {"query": "mutation {cf3: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Refund Requests', parent: {identifier: '/Focus Corp/Customer'}}) {id}}"},
+    {"query": "mutation {cf4: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Applications', parent: {identifier: '/Focus Corp/Human Resources'}}) {id}}"},
+    {"query": "mutation {cf5: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Templates', parent: {identifier: '/Focus Corp/Human Resources'}}) {id}}"},
+    {"query": "mutation {cf6: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: '2021', parent: {identifier: '/Focus Corp/Invoices'}}) {id}}"},
+    {"query": "mutation {cf7: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: '2020', parent: {identifier: '/Focus Corp/Invoices'}}) {id}}"},
+    {"query": "mutation {cf8: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: '2019', parent: {identifier: '/Focus Corp/Invoices'}}) {id}}"},
+    {"query": "mutation {cf9: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Carly Hall', parent: {identifier: '/Focus Corp/Loan Origination'}}) {id}}"},
+    {"query": "mutation {cf10: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'John Adams', parent: {identifier: '/Focus Corp/Loan Origination'}}) {id}}"},
+    {"query": "mutation {cf11: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'John Jones', parent: {identifier: '/Focus Corp/Loan Origination'}}) {id}}"},
+    {"query": "mutation {cf12: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Sue Ryan', parent: {identifier: '/Focus Corp/Loan Origination'}}) {id}}"},
+    {"query": "mutation {cf13: createFolder(repositoryIdentifier: 'OS1', classIdentifier: '',folderProperties: {name: 'Selena Swift', parent: {identifier: '/Focus Corp/Loan Origination'}}) {id}}"},
+    {"query": "mutation {cf14: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Thomas Yang', parent: {identifier: '/Focus Corp/Loan Origination'}}) {id}}"},
+    {"query": "mutation {cf15: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Construction', parent: {identifier: '/Focus Corp/Operations'}}) {id}}"},
+    {"query": "mutation {cf16: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Sites', parent: {identifier: '/Focus Corp/Operations'}}) {id}}"},
+    {"query": "mutation {cf17: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Customer Surveys', parent: {identifier: '/Focus Corp/Travel'}}) {id}}"},
+    {"query": "mutation {cf18: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Magellan Travel Subsidary', parent: {identifier: '/Focus Corp/Travel'}}) {id}}"},
+    {"query": "mutation {cf19: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Travel Contracts', parent: {identifier: '/Focus Corp/Travel'}}) {id}}"},
+
+    {"query": "mutation {cf1: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Onboarded Employees', parent: {identifier: '/Focus Corp/Human Resources'}}) {id}}"},
+    {"query": "mutation {cf2: createFolder(repositoryIdentifier: 'OS1', classIdentifier: 'Employee',folderProperties: {name: 'Jeff Goodhue', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees'},properties: [{FirstName: 'Jeff'}, {LastName: 'Goodhue'}, {EmployeeID: 'FC111111'}, {Onboarded: true}, {HireDate: '2010-02-11T00:37:01.569Z'}]}){id}}"},
+    {"query": "mutation {cf3: createFolder(repositoryIdentifier: 'OS1', classIdentifier: 'Employee',folderProperties: {name: 'Gerry Baird', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees'},properties: [{FirstName: 'Gerry'}, {LastName: 'Baird'}, {EmployeeID: 'FC222222'}, {Onboarded: true}, {HireDate: '2012-04-11T00:37:01.569Z'}]}){id}}"},
+    {"query": "mutation {cf4: createFolder(repositoryIdentifier: 'OS1', classIdentifier: 'Employee',folderProperties: {name: 'Lauren Mayes', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees'},properties: [{FirstName: 'Lauren'}, {LastName: 'Mayes'}, {EmployeeID: 'FC333333'}, {Onboarded: true}, {HireDate: '2014-06-11T00:37:01.569Z'}]}){id}}"},
+    {"query": "mutation {cf5: createFolder(repositoryIdentifier: 'OS1', classIdentifier: 'Employee',folderProperties: {name: 'Selena Swift', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees'},properties: [{FirstName: 'Selena'}, {LastName: 'Swift'}, {EmployeeID: 'FC444444'}, {Onboarded: true}, {HireDate: '2016-08-11T00:37:01.569Z'}]}){id}}"},
+    {"query": "mutation {cf6: createFolder(repositoryIdentifier: 'OS1', classIdentifier: 'Employee',folderProperties: {name: 'Thomas Yang', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees'},properties: [{FirstName: 'Thomas'}, {LastName: 'Yang'}, {EmployeeID: 'FC838473'}, {Onboarded: true}, {HireDate: '2018-10-11T00:37:01.569Z'}]}){id}}"},
+    {"query": "mutation {cf7: createFolder(repositoryIdentifier: 'OS1', classIdentifier: 'Employee',folderProperties: {name: 'Unsecured', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees'},properties: [{FirstName: 'Unsecured'} ]}){id}}"},
+    {"query": "mutation updateFolder {updateFolder(repositoryIdentifier: 'OS1' identifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured' folderProperties: { permissions: {replace: [{ type:ACCESS_PERMISSION inheritableDepth:OBJECT_ALL_CHILDREN accessMask:135159 subAccessPermission:{ accessType:ALLOW granteeName:'cn=TE_DEMO,cn=groups,O=IBM,C=US' }}]}}){ id }}"},
+
+    {"query": "mutation {cf1: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Employee Packet', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift'}}) {id}}"},
+    {"query": "mutation {cf2: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Photos', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift'}}) {id}}"},
+
+    {"query": "mutation {cf1: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Employee Packet', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured'}}) {id}}"},
+    {"query": "mutation {cf2: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Photos', parent: {identifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured'}}) {id}}"},
+
+    {"query": "mutation {cf1: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Automation Onboarding', parent: {identifier: '/Focus Corp/Technology Enablement'}}) {id}}"},
+    {"query": "mutation {cf2: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Employment Application', parent: {identifier: '/Focus Corp/Technology Enablement/Automation Onboarding'}}) {id}}"},
+    {"query": "mutation {cf3: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Interview Video', parent: {identifier: '/Focus Corp/Technology Enablement/Automation Onboarding'}}) {id}}"},
+    {"query": "mutation {cf4: createFolder(repositoryIdentifier: 'OS1', folderProperties: {name: 'Employee Packet', parent: {identifier: '/Focus Corp/Technology Enablement/Automation Onboarding'}}) {id}}"}
+
+
+    
+    
+
+
+
+]
+}

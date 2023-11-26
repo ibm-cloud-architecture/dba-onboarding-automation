@@ -1,0 +1,25 @@
+============================================================
+=                      HELP                                =
+=                                                          =
+============================================================
+
+
+1.- SCRIPT EXECUTION:
+
+$go run focusCorpConfig.go -tenant=<tenant> -env=<dev,run> -action=<design,data> -userpassword=<user:password>
+
+tenant=<tenant>: The tenant of the environment to work with
+env=<dev,run>: which environment to use dev or run
+action=<design,data>: design for folder creation and data for document upload
+userpassword=<user:password>: User and password to connect to graphql
+
+Example:
+
+$go run focusCorpConfig.go -tenant=cp4ba-tsdev.blueworkscloud.com -env=dev -action=design -userpassword=oa.fid@t7985:xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+2.- folders.json ---> contains all the folder structure to be created
+
+3.- document.json ---> contains all the details of the files to be uploaded
+
+4.- Folder DocumentScript contains all the files to be upladed

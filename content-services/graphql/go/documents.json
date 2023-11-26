@@ -1,0 +1,221 @@
+{
+"dataStatements": [
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet' documentProperties: {name: 'Employee Manual' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Employee Manual.docx",
+        "documentName": "Employee Manual.docx"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet' documentProperties: {name: 'Employee Manual' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Employee Manual.docx",
+        "documentName": "Employee Manual.docx"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet' documentProperties: {name: 'Confidentiality Agreement' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'application/pdf' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Confidentiality Agreement.pdf",
+        "documentName": "Confidentiality Agreement.pdf"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet' documentProperties: {name: 'Confidentiality Agreement' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'application/pdf' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Confidentiality Agreement.pdf",
+        "documentName": "Confidentiality Agreement.pdf"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet' classIdentifier: 'EmploymentApplication' documentProperties: {name: 'Focus Corp - Employment Application' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'application/pdf' subContentTransfer: {content:$contvar} }]} properties: [{FirstName: 'Selena'}, {LastName: 'Swift'}, {ApplicationDate: '2012-04-11T00:37:01.569Z'}] } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Focus Corp - Employment Application.pdf",
+        "documentName": "Focus Corp - Employment Application.pdf"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet' classIdentifier: 'EmploymentApplication' documentProperties: {name: 'Focus Corp - Employment Application' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'application/pdf' subContentTransfer: {content:$contvar} }]} properties: [{FirstName: 'Selena'}, {LastName: 'Swift'}, {ApplicationDate: '2012-04-11T00:37:01.569Z'}] } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Focus Corp - Employment Application.pdf",
+        "documentName": "Focus Corp - Employment Application.pdf"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Boats In Iqaluit.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Boats In Iqaluit.jpg",
+        "documentName": "Boats In Iqaluit.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Business Woman with Graphs.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Business Woman with Graphs.jpg",
+        "documentName": "Business Woman with Graphs.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Coffee.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Coffee.jpg",
+        "documentName": "Coffee.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Construction.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Construction.jpg",
+        "documentName": "Construction.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Container Ship.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Container Ship.jpg",
+        "documentName": "Container Ship.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Exponential Technologies Space.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Exponential Technologies Space.jpg",
+        "documentName": "Exponential Technologies Space.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Fuji Pagoda.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Fuji Pagoda.jpg",
+        "documentName": "Fuji Pagoda.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Gem of Bay.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Gem of Bay.jpg",
+        "documentName": "Gem of Bay.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Glacier Climb.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Glacier Climb.jpg",
+        "documentName": "Glacier Climb.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Satellite Hurricane.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Satellite Hurricane.jpg",
+        "documentName": "Satellite Hurricane.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Tropical Leaves.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Tropical Leaves.jpg",
+        "documentName": "Tropical Leaves.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Twisty Road.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Twisty Road.jpg",
+        "documentName": "Twisty Road.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Winding Costal.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Winding Costal.jpg",
+        "documentName": "Winding Costal.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Woodworking.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Woodworking.jpg",
+        "documentName": "Woodworking.jpg"
+    },
+
+
+
+
+
+
+    
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Boats In Iqaluit.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Boats In Iqaluit.jpg",
+        "documentName": "Boats In Iqaluit.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Business Woman with Graphs.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Business Woman with Graphs.jpg",
+        "documentName": "Business Woman with Graphs.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Coffee.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Coffee.jpg",
+        "documentName": "Coffee.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Construction.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Construction.jpg",
+        "documentName": "Construction.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Container Ship.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Container Ship.jpg",
+        "documentName": "Container Ship.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Exponential Technologies Space.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Exponential Technologies Space.jpg",
+        "documentName": "Exponential Technologies Space.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Fuji Pagoda.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Fuji Pagoda.jpg",
+        "documentName": "Fuji Pagoda.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Gem of Bay.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Gem of Bay.jpg",
+        "documentName": "Gem of Bay.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Glacier Climb.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Glacier Climb.jpg",
+        "documentName": "Glacier Climb.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Satellite Hurricane.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Satellite Hurricane.jpg",
+        "documentName": "Satellite Hurricane.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Tropical Leaves.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Tropical Leaves.jpg",
+        "documentName": "Tropical Leaves.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Twisty Road.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Twisty Road.jpg",
+        "documentName": "Twisty Road.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Winding Costal.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Winding Costal.jpg",
+        "documentName": "Winding Costal.jpg"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Woodworking.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Photos/Woodworking.jpg",
+        "documentName": "Woodworking.jpg"
+    }
+
+
+
+
+    
+
+
+]
+}
