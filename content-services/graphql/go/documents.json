@@ -36,6 +36,22 @@
         "documentName": "Focus Corp - Employment Application.pdf"
     },
 
+
+
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Employee Packet' documentProperties: {name: 'Interview Video' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'video/mp4' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Focus Corp - Interview Video.mp4"
+    },
+
+    {
+        "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Employee Packet' documentProperties: {name: 'Interview Video' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'video/mp4' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
+        "documentPath":"DocumentScript/Focus Corp - Interview Video.mp4"
+    },
+
+
+
+
     {
         "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Selena Swift/Photos' documentProperties: {name: 'Boats In Iqaluit.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
         "documentPath":"DocumentScript/Photos/Boats In Iqaluit.jpg",
@@ -125,7 +141,7 @@
 
 
 
-    
+
 
     {
         "query": "mutation ($contvar:String) {createDocument(repositoryIdentifier:'OS1' fileInFolderIdentifier: '/Focus Corp/Human Resources/Onboarded Employees/Unsecured/Photos' documentProperties: {name: 'Boats In Iqaluit.jpg' contentElements:{replace: [{type: CONTENT_TRANSFER contentType: 'image/jpeg' subContentTransfer: {content:$contvar} }]} } checkinAction: {} ) { id name } }",
@@ -214,7 +230,7 @@
 
 
 
-    
+
 
 
 ]
