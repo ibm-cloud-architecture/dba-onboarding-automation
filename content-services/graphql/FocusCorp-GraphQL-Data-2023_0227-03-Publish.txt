@@ -30,7 +30,15 @@ Do a search and replace to update the tenant URL and service account login/passw
 Step 3
 #================
 
-Execute each CURL command separately below, ensure that the files accessible from your CURL environment
+Execute each CURL command separately below, ensure that the files accessible from your CURL environment.
+
+Please note:
+1. GraphQL endpoint ends with /graphql
+2. Usually a service account is used to execute the commands. The account must have access to the repository and folder. 
+3. CURL commands below were written for a Linux envrioment. If you run these commands on a Windows envrionment please note the following:
+   a. Windows command prompt, multi-line input is denoted with ^ instead of \
+   b. Windows command prompt treats single quote characters (‘) differently than Linux. You should replace the single quotes with double quotes
+4. curl -v option can be used for verbose mode if you encounter issues.  
 
 #==============================================================
 # Folder - Selena Swift
