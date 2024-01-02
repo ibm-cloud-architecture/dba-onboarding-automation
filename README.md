@@ -48,7 +48,7 @@ Note:
                         1. This access management group identifies users that have access to modify all folders and documents.
                         2. Place the 'OA' service credential into this group
                 1. Group: **TE_DEMO**
-                    1. Add demo users to this group -OR- add the group `ECMoC_Client_CPE_User`
+                    1. Add demo users to this group -OR- add the group `ECMoC_Client_CPE_User` (Note: 'ECMoC_Client_CPE_User' access mangement group is configured to include 'Participants' (aka 'Production'))
                         1. This access management group identifies users that can:
                             1. Access content (folders/documents)
                             1. Perform redactions on documents
