@@ -113,28 +113,40 @@ Note:
             1. Employee ID
             1. Onboarded
             1. Hire Date
-    1. Focus Corp folder structure - create folder structure using GraphiQL
-        1. Locate your GraphQL URL, using Cloud Pak for Business Automation as a Service **example**, the format is:
-            1. https://\<tenant\>.automationcloud.ibm.com/dba/run/content-services-graphql/
-        1. Download and review the GitHub script (located within this GitHub): `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
-        1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
-        1. Copy and paste each section and confirm the script executes successfully on your environment
-    1. Sample Content - using the Navigator Browse feature, navigate to folder `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` and perform the following:
-        1. For Photos - add the images to the `Photos` subfolder from the GitHub source: `content-services / sample-content / Selena Swift / Photos`
-        1. For Employee Packet - choose one of the methods below:
-            1. Using CURL/GraphQL
-                1. Review and execute the GitHub script: `content-services / graphql / FocusCorp-GraphQL-Data-YYYYY_MMDD-XX.txt`
-            1. Manual process using Navigator
-                1. Download the content from the GitHub source: `content-services / sample-content / Selena Swift / Employee Packet` and manually upload the following:
-                    1. Confidentiality Agreement.pdf (Class: Document)
-                    1. Employee Manual.docx (Class: Document)
-                    1. Focus Corp - Employment Application.pdf (Class: Employment Application)
-                        1. First Name: Selena
-                        1. Last Name: Swift
-                        1. Application Date: specify any date
-        1. TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
-            1. Update the security on the **Unsecured** folder
-                1. TE_DEMO - Modify properties - This object and all children
+    1. Focus Corp folder structure - use either Go scripts or execute using GraphiQL. Note: the Go scripts using GraphQL commands.  
+        1. Option 1 - Go Script
+            1. Install Go - https://go.dev/
+            1. GitOps Pattern (IBM Only) Info
+                1. https://github.ibm.com/dte2-0/ccp-gitops-patterns/blob/main/cp4ba-saas/scripts/main.go
+            1. Review/verify design structure: folders.json
+            1. Review/verify data: documents.json
+            1. Review usage in the HELP file
+                1. $go run focusCorpConfig.go -tenant=<tenant> -env=<dev,run> -action=<design,data> -userpassword=<user:password>
+                1. Execute design (folder.json)
+                1. Execute data (documents.json)
+        1. Option 2 - create directly using GraphiQL
+            1. Locate your GraphQL URL, using Cloud Pak for Business Automation as a Service **example**, the format is:
+                1. https://\<tenant\>.automationcloud.ibm.com/dba/run/content-services-graphql/
+            1. Download and review the GitHub script (located within this GitHub): `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
+            1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
+            1. Copy and paste each section and confirm the script executes successfully on your environment
+    1. Sample Content - if Option 1 (Go Script), was used in the prior step, this step is no longer necessary as the content was uploaded using the -action=data parameter of the Go script. 
+        1. Using the Navigator Browse feature, navigate to folder `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` and perform the following:
+            1. For Photos - add the images to the `Photos` subfolder from the GitHub source: `content-services / sample-content / Selena Swift / Photos`
+            1. For Employee Packet - choose one of the methods below:
+                1. Using CURL/GraphQL
+                    1. Review and execute the GitHub script: `content-services / graphql / FocusCorp-GraphQL-Data-YYYYY_MMDD-XX.txt`
+                1. Manual process using Navigator
+                    1. Download the content from the GitHub source: `content-services / sample-content / Selena Swift / Employee Packet` and manually upload the following:
+                        1. Confidentiality Agreement.pdf (Class: Document)
+                        1. Employee Manual.docx (Class: Document)
+                        1. Focus Corp - Employment Application.pdf (Class: Employment Application)
+                            1. First Name: Selena
+                            1. Last Name: Swift
+                            1. Application Date: specify any date
+            1. TE_DEMO group **Author** permission to folder: `\Focus Corp\Human Resources\Onboarded\Employees\Unsecured`
+                1. Update the security on the **Unsecured** folder
+                    1. TE_DEMO - Modify properties - This object and all children
     1. Navigator Administration
         1. Connections, Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
             1. For the FileNet content object store, set the following:
