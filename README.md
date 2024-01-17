@@ -113,7 +113,8 @@ Note:
             1. Employee ID
             1. Onboarded
             1. Hire Date
-    1. Focus Corp folder structure - use either Go scripts or execute using GraphiQL. Note: the Go scripts using GraphQL commands.  
+    1. Focus Corp folder structure - use either Go scripts or execute using GraphiQL. 
+        Note: the Go scripts use GraphQL commands.  
         1. Option 1 - Go Script
             1. Install Go - https://go.dev/
             1. GitOps Pattern (IBM Only) Info
