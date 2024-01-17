@@ -123,12 +123,13 @@ Note:
                     1. Review usage in the HELP file
                     1. Review/verify design structure: folders.json
                     1. Review/verify data: documents.json
+                        1. The content is located in the **Focus Corp - Demo Content** folder. Create **DocumentScript** folder and copy the desired content.  
                     1. Reference info - review GitOps Pattern (IBM Only)
                         1. https://github.ibm.com/dte2-0/ccp-gitops-patterns/blob/main/cp4ba-saas/scripts/main.go
                 1. Execute 
                     1. $go run focusCorpConfig.go -tenant=<tenant> -env=<dev,run> -action=<design,data> -userpassword=<user:password>
                     1. Execute design (folder.json)
-                    1. Execute data (documents.json)
+                    1. Execute data (documents.json) - ensure content is in subfolder **DocumentScript**
         1. Option 2 - create directly using GraphiQL
             1. Locate your GraphQL URL, using Cloud Pak for Business Automation as a Service **example**, the format is:
                 1. https://\<tenant\>.automationcloud.ibm.com/dba/run/content-services-graphql/
