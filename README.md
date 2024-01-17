@@ -117,7 +117,7 @@ Note:
         Note: the Go scripts use GraphQL commands.  
         1. Option 1 - Go Script
             1. Install Go - https://go.dev/
-            1. GitOps Pattern (IBM Only) Info
+            1. GitOps Pattern Info (IBM Only) 
                 1. https://github.ibm.com/dte2-0/ccp-gitops-patterns/blob/main/cp4ba-saas/scripts/main.go
             1. Review/verify design structure: folders.json
             1. Review/verify data: documents.json
