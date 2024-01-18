@@ -92,7 +92,7 @@ Note:
         1. `Document`
             1. Administrators - Full Control - This object only
             1. TE_ADMIN - Full Control - This object only
-            1. TE_DEMO - View properties <Default> - This object only
+            1. TE_DEMO - View content <Default> - This object only
             1. #CREATOR-OWNER - Full Control - This object only
 1. Deploy Content Services
     1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1` on SaaS and `CONTENT` on ROKS) and perform the following:
