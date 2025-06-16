@@ -3,63 +3,46 @@
 Links
 =========================================================================
 
+FileNet 5.6 Annoucement Letter
+https://www.ibm.com/docs/en/filenet-p8-platform/5.6.0?announcement=filenet-content-manager-56-delivers-new-features-enhancements
+
+FileNet WSI
 https://icp4adeploy-cpe-stateless-svc.cp4ba.svc:9443/wsi/FNCEWS40MTOM/
+
+FileNet System Requirements
+https://ibm.biz/FileNetSystemRequirements
+
+FileNet Content Manager - Software Product Cability Report (SPCR)
+https://ibm.biz/FileNetSPCR
+
+Community - Automating Your Business
+https://ibm.biz/CommunityBusinessAutomation
 
 
 =========================================================================
 Sample docs
 =========================================================================
 
+FileNet - Sample Document - Employment Application
 https://ibm.biz/sampledoc1
-
-
 https://github.com/ibm-cloud-architecture/dba-onboarding-automation/raw/main/content-services/sample-content/Focus%20Corp%20-%20Employment%20Application.pdf
 
+FileNet - Sample Document - Employment Application Video
 https://ibm.box.com/s/wrg8tk9cx7bi4g23wjk19esxi1rmnl8l
 
-
-https://www.ibm.com/docs/en/filenet-p8-platform/5.6.0?announcement=filenet-content-manager-56-delivers-new-features-enhancements
-
-
-
-=========================================================================
-Events Actions
-=========================================================================
-
-https://ecmdeveloper.com/contentengine/developing-event-actions/
-https://p8programmer.blogspot.com/2017/05/java-code-for-event-subscription.html
-https://www.google.com/search?client=firefox-b-1-d&q=create+jar+file+from+java+code
-https://engineering.tomtom.com/create-java-jar/
-
-
+Sample Folder
+https://ibm.biz/FileNetLabContent
+https://github.com/ibm-cloud-architecture/dba-onboarding-automation/tree/main/content-services/sample-content/lab-content
 
 
 =========================================================================
-Managing Storage Area - Flow
+Event Actions - Subscriptions
 =========================================================================
 
-Review Storage
-   Advanced Storage Areas
-   Database Storage Area
+FileNet Event Action - Sample JAR v1
+https://ibm.biz/EDUJarV1
+https://github.com/ibm-cloud-architecture/dba-onboarding-automation/raw/main/content-services/sample-content/lab-content/EDULog.jar
 
-   Object Store: Content
-       Advanced Storage Areas
-
-
-Review Storage Policy
-   
-
-
-Move documents between Storage Areas
-
-   Sweep
-
-
-
-
-
-
-
-
-
-
+FileNet Event Action - Sample JAR v2
+https://ibm.biz/EDUJarV2
+https://github.com/ibm-cloud-architecture/dba-onboarding-automation/raw/main/content-services/sample-content/lab-content/EDULogv2.jar
