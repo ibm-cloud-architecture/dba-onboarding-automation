@@ -1,0 +1,65 @@
+
+=========================================================================
+Links
+=========================================================================
+
+https://icp4adeploy-cpe-stateless-svc.cp4ba.svc:9443/wsi/FNCEWS40MTOM/
+
+
+=========================================================================
+Sample docs
+=========================================================================
+
+https://ibm.biz/sampledoc1
+
+
+https://github.com/ibm-cloud-architecture/dba-onboarding-automation/raw/main/content-services/sample-content/Focus%20Corp%20-%20Employment%20Application.pdf
+
+https://ibm.box.com/s/wrg8tk9cx7bi4g23wjk19esxi1rmnl8l
+
+
+https://www.ibm.com/docs/en/filenet-p8-platform/5.6.0?announcement=filenet-content-manager-56-delivers-new-features-enhancements
+
+
+
+=========================================================================
+Events Actions
+=========================================================================
+
+https://ecmdeveloper.com/contentengine/developing-event-actions/
+https://p8programmer.blogspot.com/2017/05/java-code-for-event-subscription.html
+https://www.google.com/search?client=firefox-b-1-d&q=create+jar+file+from+java+code
+https://engineering.tomtom.com/create-java-jar/
+
+
+
+
+=========================================================================
+Managing Storage Area - Flow
+=========================================================================
+
+Review Storage
+   Advanced Storage Areas
+   Database Storage Area
+
+   Object Store: Content
+       Advanced Storage Areas
+
+
+Review Storage Policy
+   
+
+
+Move documents between Storage Areas
+
+   Sweep
+
+
+
+
+
+
+
+
+
+
