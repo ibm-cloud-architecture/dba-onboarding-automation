@@ -1,0 +1,76 @@
+
+=========================================================================
+General
+=========================================================================
+
+This file:
+Course-ZF412G-WF12G.txt
+
+Folder:
+https://ibm.biz/FileNetLabContent
+
+
+=========================================================================
+Environment Bookmarks
+=========================================================================
+
+OpenShift Console
+https://console-openshift-console.apps.ocp.ibm.edu
+
+Navigator
+https://cpd-cp4ba.apps.ocp.ibm.edu/icn/navigator/?desktop=ICN
+https://cpd-cp4ba.apps.ocp.ibm.edu/icn/navigator/?desktop=usr<NNN>
+
+ACCE - Administration Console for Content Platform Engine
+https://cpd-cp4ba.apps.ocp.ibm.edu/cpe/acce/
+
+Content Engine Health
+https://cpd-cp4ba.apps.ocp.ibm.edu/cpe/P8CE/Health
+
+Navigator Ping
+https://cpd-cp4ba.apps.ocp.ibm.edu/icn/navigator/ping.jsp
+
+Content Engine Startup Context
+https://cpd-cp4ba.apps.ocp.ibm.edu/cpe/FileNet/Engine
+
+Config Map
+https://console-openshift-console.apps.ocp.ibm.edu/k8s/ns/cp4ba/configmaps/icp4adeploy-cp4ba-access-info/yaml
+
+
+=========================================================================
+Copy / Paste Items in the Exercise Guide
+=========================================================================
+
+Database Connection 
+oc_cpe_obj_store_display_name
+
+
+FileNet - Sample Document - Employment Application
+https://ibm.biz/sampledoc1
+
+FileNet WSI - Server URL
+https://icp4adeploy-cpe-stateless-svc.cp4ba.svc:9443/wsi/FNCEWS40MTOM/
+
+Event Log - Subscription Filter
+(MajorVersionNumber=1 and MinorVersionNumber=0) OR (MajorVersionNumber=0 and MinorVersionNumber=1)
+
+
+=========================================================================
+Info
+=========================================================================
+
+FileNet 5.6 Announcement Letter
+https://www.ibm.com/docs/en/filenet-p8-platform/5.6.0?announcement=filenet-content-manager-56-delivers-new-features-enhancements
+
+FileNet P8 Platform Documentation
+https://www.ibm.com/docs/en/filenet-p8-platform/5.6.0
+
+
+FileNet System Requirements
+https://ibm.biz/FileNetSystemRequirements
+
+FileNet Content Manager - Software Product Cability Report (SPCR)
+https://ibm.biz/FileNetSPCR
+
+Community - Automating Your Business
+https://ibm.biz/CommunityBusinessAutomation
