@@ -63,10 +63,12 @@ Note:
                     1. Participants
                     1. ECMoC_Client_CPE_User (from Particpants)
     1. If deploying on your own OpenShift environment:
-        * Make sure you have a login to all required components above
+        * Make sure you have a login to all required components in `acce`:
+            1. Users - CEAdmin or cpadmin
+            1. Groups - AllSharedUsers, CEAdminGroup or cpadmins, #AUTHENTICATED-USERS
     1. If deploying on your own OpenShift environment based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS):
         * Install the `oc` CLI from the **Client-side requirements** here: [V21.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-demo-deployment).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
-1. FileNet Security (Configure in `ACCE`)
+1. FileNet Security (Configure in `ACCE`) - *Skip for Openshift Environment*
     1. `Object Store` (default)
         1. ECMoC_Service_Account - Full Control - This object only
         1. ECMoC_Client_CPE_Administrator - Full Control - This object only  
@@ -95,7 +97,15 @@ Note:
             1. TE_DEMO - View content <Default> - This object only
             1. #CREATOR-OWNER - Full Control - This object only
 1. Deploy Content Services
-    1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1` on SaaS and `CONTENT` on ROKS) and perform the following:
+    1. Log into Administration Console for Content Engine (ACCE) and locate your **Object Store** (generally called `OS1` on SaaS and `CONTENT` on ROKS).
+        * For Openshift Environment
+            1. Go to Navigator > Browse Content
+            1. Note down the repo
+            1. Go to Administration from hamburger menu
+            1. Go to Connections > Repositories
+            1. Open the Repository from Step 2
+            1. Note 'Object store symbolic name' - *You will be using this Object Store for rest of the instructions including Go Scripts.*
+        * Perform the following:
         1. `Property Templates` - navigate to **Data Design, Property Templates** and create property templates for:
             1. First Name (String)
             1. Last Name (String)
@@ -115,7 +125,7 @@ Note:
             1. Hire Date
     1. Focus Corp folder structure - use either Go scripts or execute using GraphiQL. 
         Note: the Go scripts use GraphQL commands.  
-        1. Option 1 - Go Script
+        1. Option 1 - Go Script (Recommended)
             1. Install Go 
                 1. https://go.dev/
             1. Download and review the Go script (located within this GitHub): `content-services / graphql / go` 
@@ -127,16 +137,19 @@ Note:
                     1. Reference info - review GitOps Pattern (IBM Only)
                         1. https://github.ibm.com/dte2-0/ccp-gitops-patterns/blob/main/cp4ba-saas/scripts/main.go
                 1. Execute 
-                    1. $go run focusCorpConfig.go -tenant=<tenant> -env=<dev,run> -action=<design,data> -userpassword=<user:password>
+                    1. `$go run focusCorpConfig.go -tenant=<tenant> -env=<dev,run> -action=<design,data> -userpassword=<user:password>`
+                        * For Openshift - `$go run focusCorpConfig.go -tenant=<tenant> -action=<design,data> -userpassword=user:password`
+                        * user = cpadmin or CEAdmin
                     1. Execute design (folder.json)
                     1. Execute data (documents.json) - ensure content is in subfolder **DocumentScript**
         1. Option 2 - create directly using GraphiQL
             1. Locate your GraphQL URL, using Cloud Pak for Business Automation as a Service **example**, the format is:
-                1. https://\<tenant\>.automationcloud.ibm.com/dba/run/content-services-graphql/
+                *  https://`<tenant>`.automationcloud.ibm.com/dba/run/content-services-graphql/
+                * For OpenShift - https://cpd-prod.apps.`<tenant>`.cp.fyre.ibm.com/content-services-graphql/ e.g https://cpd-cp4ba.apps.ocp.ibm.edu/content-services-graphql
             1. Download and review the GitHub script (located within this GitHub): `content-services / graphql / FocusCorp-GraphiQL-Design-YYYY_MM_DD-XX.txt`
             1. The repository id is `OS1` in the script.  If your repository id is different, update the script with your repository id
             1. Copy and paste each section and confirm the script executes successfully on your environment
-    1. Sample Content - if Option 1 (Go Script), was used in the prior step, this step is no longer necessary as the content was uploaded using the -action=data parameter of the Go script. 
+    1. Sample Content - if Option 2 is selected in above step. Skip if Option 1 (Go Script) was used.
         1. Using the Navigator Browse feature, navigate to folder `\Focus Corp\Human Resources\Onboarded\Employees\Selena Swift` and perform the following:
             1. For Photos - add the images to the `Photos` subfolder from the GitHub source: `content-services / sample-content / Selena Swift / Photos`
             1. For Employee Packet - choose one of the methods below:
@@ -154,11 +167,12 @@ Note:
                 1. Update the security on the **Unsecured** folder
                     1. TE_DEMO - Modify properties - This object and all children
     1. Navigator Administration
-        1. Connections, Repositories - the lab uses two object stores - the FileNet content object store and the BAW target object store
+        1. Connections, Repositories - the lab uses two object stores - the FileNet content object store (FNOS**) and the BAW target object store (BAWTOS)
             1. For the FileNet content object store, set the following:
-                1. **General** tab - Display name: **Corporate Operations**
+                1. **General** tab - Display name: **Corporate Operations** - *Skip for Openshift env*
                 1. **Configuration Parameters** tab:
-                    1. **Workflow connection point** - OS1_CP1:1
+                    1. **Workflow connection point** - `OS1_CP1:1`
+                        * For Openshift env - select `pe_conn_content:1, cpe_connect_tos:1`
                     1. **State icons** - enabled for all except **Are uploading** (requires Aspera plugin)
                     1. **Task manager connection ID** - set using an administrator user ID and password to run background tasks that modify the repository.
                     1. **Track downloads** - set to Enable
@@ -172,7 +186,7 @@ Note:
                     1. **Show in Details View**: Name, Content Size, Last Modifier, Date Last Modified, Major Version Number, Description
                     1. **Show in Magazine View**: Name, Last Modifier, Date Last Modified, Likes, Tags, Downloads, Comments
                     1. Note: if you are unable to specify the fields above, you may need to recreate your repository.  
-            1. For the BAW target object store, ensure that the repository configuration setting for **General, Display Name** is set to **Workflow Operations**        
+            1. For the BAW target object store, ensure that the repository configuration setting for **General, Display Name** is set to **Workflow Operations** - *Skip for Openshift env*    
         1. Menus
             1. Copy the **Default document context menu** menu option and add options for **Launch Process** and **Share**  (Share is only needed for Additional Assets section)
                 1. Update your desktop and update **Context Menus - Content Context Menus** - **Document context menu** to the new menu
@@ -188,7 +202,7 @@ Note:
                     1. **Merge and Split** - set to Enable
                     1. **Sync services** - set to Enable
                     1. **Edit Service** - set to Enable
-                    1. **Office for the web service** - set to Enable and Allow collaborative editing
+                    1. **Office for the web service** - set to Enable and Allow collaborative editing - *Skip for Openshift env*
                     1. **Email settings** - Use the HTML-based email service checkbox enabled along with **Allow users to send attachments**
                     1. **Additional settings**
                         1. **Show security settings during add and check in actions** - checkbox disabled
@@ -254,6 +268,15 @@ Note:
                 \<tenant\>.automationcloud.ibm.com, 443, /dba/dev/openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
             1. Example values:
                 fncm-dev-\<tenant\>.blueworkscloud.com, 443, /openfncmis_wlp/services11, OS1, \<service id\>, \<service id password\>
+        1. For Openshift Env
+            1. Login to Console 
+            1. Go to Workloads > ConfigMaps > Open icp4adeploy-cp4ba-access-info
+            1. Host name = cpd-cp4ba.apps.ocp.ibm.edu
+            1. Port = 443
+            1. Context path = /cmis/openfncmis_wlp/services11
+            1. Repository = CONTENT
+            1. User ID = cpadmin
+            1. Password = *cpadmin Password*
         1. Use the **Test connection** button to validate connectivity
     1. Confirm settings for process: **Onboard Employee** - **Start**  
         1. General - Event Properties: Type should be set to **Employment Application**
@@ -269,8 +292,8 @@ Note:
     1. From **Studio** (Business Automation Studio), create a new snapshot of the workflow application. Name the snapshot something very shot such as `V2`.  Naming it V2 will allow the launching of the process to be displayed as:
         1. Name: V2
         1. Description: Automation Onboarding
-    1. Install the new snapshot to your **Run ProcessServer**
-    1. From the Production environment, access **Process Admin Console** and go to **Installed Apps**
+    1. Install the new snapshot to your **Run ProcessServer** - *Skip for Openshift env*
+    1. From the Production environment, access **Process Admin Console** and go to **Installed Apps** - *Skip for Openshift env*
         1. Select the **Employee Onboarding** process app
         1. Select **Team Bindings**
             1. Select the group **TE_DEMO** as a member for all the teams (All Users, Managers, Managers of All Users, Process Owner)
@@ -281,6 +304,15 @@ Note:
 1. Deploy Business Automation Studio artifacts
     1. From the Development environment, select **Build, Studio**
     1. From **Business applications**, import the Onboarding Automation application using `Onboarding_Automation - App - YYYY.MM.DD_XX.twx`
+        * For Openshift env:
+            1. Open the Application
+            1. Go to Page: Starting Page
+            1. Click 'Run the demo!'
+            1. Double click Persona 1 image
+            1. Make sure you have opened advanced properties modal.
+            1. Go to Events
+            1. In 'On click' field, update to following line:
+                * `window.open("https://cpd-cp4ba.app.ocp.ibm.edu/icn/navigator");`
     1. No edit of the application should be required but if an edit is done, create a new snapshot
     1. Export the application - select **Export this version to be published (.zip)**
 1. Deploy Business Automation Navigator artifacts
