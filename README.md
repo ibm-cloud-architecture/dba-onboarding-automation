@@ -16,7 +16,7 @@
 
 We assume the following products are installed, up and running:
 
-* IBM Cloud Pak® for Business Automation version 22.x
+* IBM Cloud Pak® for Business Automation version 25.x
     * Automation Foundation on OpenShift
     * Business Automation Applications (including Studio and App Engine) on OpenShift
     * Business Automation Content Services on VMs or OpenShift
@@ -67,7 +67,7 @@ Note:
             1. Users - CEAdmin or cpadmin
             1. Groups - AllSharedUsers, CEAdminGroup or cpadmins, #AUTHENTICATED-USERS
     1. If deploying on your own OpenShift environment based on the demo pattern and running on IBM Red Hat OpenShift on IBM Cloud (ROKS):
-        * Install the `oc` CLI from the **Client-side requirements** here: [V21.0.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/21.0.x?topic=deployments-preparing-demo-deployment).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
+        * Install the `oc` CLI from the **Client-side requirements** here: [V25.x](https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/25.0.0?topic=deployment-preparing-starter).  Note: all other **Client-side requirements** are optional for this install but recommended to manage the ROKS cluster.              
 1. FileNet Security (Configure in `ACCE`) - *Skip for Openshift Environment*
     1. `Object Store` (default)
         1. ECMoC_Service_Account - Full Control - This object only
