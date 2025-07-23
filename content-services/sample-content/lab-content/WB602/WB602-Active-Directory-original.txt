@@ -1,0 +1,143 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Active Directory
+--------------------------------------------------
+#Create users for Active Directory
+#Create OU
+
+dsadd ou "ou=ecm,dc=ibm,dc=org"
+dsadd ou "ou=groups,ou=ecm,dc=ibm,dc=org"
+dsadd ou "ou=users,ou=ecm,dc=ibm,dc=org"
+-----------------------------------------------------------------------------
+
+#Create four groups by running the following command (one command at a time):
+
+New-ADGroup -Name 'CPADMINS' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'P8ADMINS' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'CPUSERS' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'P8USERS' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'CloudPakUsers' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'CloudPakAdmins' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'BusinessTeamAdmins' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'SolutionDevelopers' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+-----------------------------------------------------------------------------
+
+#Create four LDAP groups for Enterprise Records and three groups for Task Manager.
+
+New-ADGroup -Name 'Records Administrators' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'Records Managers' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'Records Privileged Users' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'Record Users' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org' 
+
+New-ADGroup -Name 'TaskAdmins' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'TaskUsers' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+New-ADGroup -Name 'TaskAuditors' -server localhost:389 -GroupScope Global -path 'ou=groups,ou=ecm,dc=ibm,dc=org'
+
+-----------------------------------------------------------------------------
+
+#Create a common password for all users:
+
+$AD_USER_PWD = Get-Credential -User "AD users" -Message "AD common password for all users"
+
+password: Passw0rd
+-----------------------------------------------------------------------------
+#Check if you entered the password correctly 
+
+$AD_USER_PWD.GetNetworkCredential().password 
+
+-----------------------------------------------------------------------------
+#Create users by running the following command (one command at a time):
+
+New-ADUser -Name 'ldapbind' -server localhost:389 -PasswordNeverExpires 1
+-AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'ldapbind'  -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress ldapbind@ibm.org
+
+New-ADUser -Name 'cpadmin' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'cpadmin' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress cpadmin@ibm.org
+
+
+New-ADUser -Name 'p8admin' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'p8admin' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress p8admin@ibm.org
+
+New-ADUser -Name 'cpadmin1' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'cpadmin1' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress cpadmin1@ibm.org
+New-ADUser -Name 'cpadmin2' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'cpadmin2' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress cpadmin2@ibm.org
+New-ADUser -Name 'amy' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'amy' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress amy@ibm.org
+New-ADUser -Name 'chris' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'chris' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress chris@ibm.org
+New-ADUser -Name 'bella' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'bella' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress bella@ibm.org
+New-ADUser -Name 'peter' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'peter' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress peter@ibm.org
+New-ADUser -Name 'mason' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'mason' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress mason@ibm.org
+New-ADUser -Name 'nancy' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'nancy' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress nancy@ibm.org
+New-ADUser -Name 'sara' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'sara' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress sara@ibm.org
+New-ADUser -Name 'sam' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'sam' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress sam@ibm.org
+New-ADUser -Name 'uma' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'uma' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress uma@ibm.org
+-----------------------------------------------------------------------------
+
+#Add the cpadmin user to the CPADMINS group:
+Add-ADGroupMember  -server localhost:389 -identity 'cn=CPADMINS,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+#Add the user cpadmin1 to the CloudPakAdmins group:
+Add-ADGroupMember  -server localhost:389 -identity 'cn=CloudPakAdmins,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin1,ou=users,ou=ecm,dc=ibm,dc=org'
+
+#Add the user uma to the CloudPakUsers group:
+Add-ADGroupMember  -server localhost:389 -identity 'cn=CloudPakUsers,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=uma,ou=users,ou=ecm,dc=ibm,dc=org'
+
+#Add the user bella to the BusinessTeamAdmins group:
+Add-ADGroupMember  -server localhost:389 -identity 'cn=BusinessTeamAdmins,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=bella,ou=users,ou=ecm,dc=ibm,dc=org'
+
+#Add the users sam and sara to the SolutionDevelopers group:
+Add-ADGroupMember  -server localhost:389 -identity 'cn=SolutionDevelopers,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=sara,ou=users,ou=ecm,dc=ibm,dc=org'
+Add-ADGroupMember  -server localhost:389 -identity 'cn=SolutionDevelopers,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=sam,ou=users,ou=ecm,dc=ibm,dc=org'
+
+
+
+-----------------------------------------------------------------------------
+
+#Add the cpadmin user to the Enterprise Records and Task Manager groups
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=Records Administrators,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=Records Managers,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=Records Privileged Users,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=Record Users,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=TaskAdmins,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=TaskUsers,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=TaskAuditors,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=cpadmin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+-----------------------------------------------------------------------------
+
+#Add the p8admin user to the p8admin group
+
+Add-ADGroupMember  -server localhost:389 -identity 'cn=P8ADMINS,ou=groups,ou=ecm,dc=ibm,dc=org' -members 'cn=p8admin,ou=users,ou=ecm,dc=ibm,dc=org'
+
+*****************************************************************************
