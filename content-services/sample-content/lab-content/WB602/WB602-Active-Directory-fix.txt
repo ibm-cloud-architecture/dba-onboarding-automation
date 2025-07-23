@@ -35,6 +35,7 @@ New-ADUser -Name 'nancy' -server localhost:389 -PasswordNeverExpires 1 -AccountP
 New-ADUser -Name 'sara' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'sara' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress sara@ibm.org
 New-ADUser -Name 'sam' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'sam' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress sam@ibm.org
 New-ADUser -Name 'uma' -server localhost:389 -PasswordNeverExpires 1 -AccountPassword (ConvertTo-SecureString -String $($AD_USER_PWD.GetNetworkCredential().password) -asplaintext -force) -Enabled 1 -GivenName 'uma' -path 'ou=users,ou=ecm,dc=ibm,dc=org' -EmailAddress uma@ibm.org
+
 -----------------------------------------------------------------------------
 
 #Add the cpadmin user to the CPADMINS group:
