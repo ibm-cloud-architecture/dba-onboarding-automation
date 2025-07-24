@@ -1,0 +1,29 @@
+
+Decision Center
+https://cpd-cp4ba.apps.ocp.ibm.edu/odm/decisioncenter/
+
+Decision Runner
+https://cpd-cp4ba.apps.ocp.ibm.edu/odm/DecisionRunner
+
+Decision Server Runtime
+https://cpd-cp4ba.apps.ocp.ibm.edu/odm/DecisionService
+
+TrustStore
+https://cpd-cp4ba.apps.ocp.ibm.edu/odm/decisioncenter/assets/truststore.jks
+
+Add these lines of text to the .ini file
+
+-Djavax.net.ssl.trustStore=truststore.jks
+-Djavax.net.ssl.trustStorePassword=changeit
+
+
+CPD Dashboard
+URL: https://cpd-cp4ba.apps.ocp.ibm.edu/zen/#/homepage
+
+Configure Target Server
+- Name: ODM-Connect
+- URL: https://cpd-cp4ba.apps.ocp.ibm.edu/odm/res
+The URL is similar to the ODM Decision Server Console that you copied earlier.
+- Authentication > Method: Zen API Key
+- UserID : cpadmin
+- API Key: <your provisioned API key>
