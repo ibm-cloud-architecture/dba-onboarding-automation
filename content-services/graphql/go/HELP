@@ -22,4 +22,4 @@ $go run focusCorpConfig.go -tenant=cp4ba-tsdev.blueworkscloud.com -env=dev -acti
 
 3 - document.json ---> contains all the details of the files to be uploaded. Update reference to object store - OS1 is default
 
-4 - Folder DocumentScript contains all the files to be uploaded (move desired folders/documents from Focus Corp - Demo Content)
+4 - Folder DocumentScript should contain all the files to be uploaded (copy desired folders/documents from Focus Corp - Demo Content)
